@@ -1,0 +1,48 @@
+@use "global" as *;
+
+.section-title{
+	text-align: center;
+}
+
+.section-title__en{
+    font-family:$font-gotu ;
+	font-size: rem(32);
+	font-weight: $normal;
+	line-height: calc(40/32);
+    @include mq(md){
+        font-size: rem(40);
+        line-height: calc(1);
+    }
+}
+
+.section-title__en--white,
+.section-title__jp--white{
+	@include mq(md){
+		color: #fff;
+	}
+}
+
+.section-title__en::first-letter {
+	text-transform: capitalize;
+    color: #408F95;
+}
+
+.section-title__en--white::first-letter {
+	@include mq(md){
+		text-transform: capitalize;
+    	color: #fff;
+	}
+}
+
+.section-title__jp{
+	margin-top: rem(6);
+	color: #408F95;
+	font-size: rem(12);
+	font-weight: $regular;
+    line-height: calc(18/12);
+	padding-bottom: rem(2); /* ピクセルパーフェクトの為に設置 */
+	@include mq(md){
+		margin-top: rem(8);
+		padding-bottom: 0;
+	}
+}

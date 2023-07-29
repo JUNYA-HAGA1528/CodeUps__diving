@@ -1,0 +1,52 @@
+@use "global" as *;
+  
+.header__hamburger{
+    z-index:9999;
+    padding: 0;
+    @include mq(md){
+        display: none;
+    }
+}
+
+.header__hamburger span {
+    position: relative;
+    display: block;
+    height: rem(0.08);
+    width: rem(32);
+    background: #fff;
+    transition: ease .3s;
+}
+
+.header__hamburger span:nth-child(1) {
+    top: 0;
+}
+
+.header__hamburger span:nth-child(2) {
+    margin: 12px 0;
+}
+
+.header__hamburger span:nth-child(3) {
+    top: 0;
+}
+
+/*is-OPEN時の動き*/
+.header__hamburger.is-open span:nth-child(1) {
+    top: 12px;
+    transform: rotate(35deg);
+}
+
+.header__hamburger.is-open span:nth-child(2) {
+    transform: translateY(-50%);
+    opacity: 0;
+}
+
+.header__hamburger.is-open span:nth-child(3) {
+    top: -12px;
+    transform: rotate(-35deg);
+}
+
+body.fixed {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+}

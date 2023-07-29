@@ -1,0 +1,90 @@
+@use "global" as *;
+
+.button{
+    position: relative;
+	background-color: #408F95;
+	border: rem(1) solid #408F95;
+	color: #fff;
+	display: inline-block;
+    padding: rem(15) 0;
+    width: rem(202);
+	font-family: $font-gotu;
+	font-size: rem(14);
+	font-weight: normal;
+	line-height: calc(22/14);
+	text-align: center;
+	transition: color 0.2s;
+	z-index: 1;
+    cursor: pointer;
+}
+
+.button:hover {
+    @include mq(md){
+        color: #408F95;
+        opacity: 1;
+    }
+}
+
+.button:hover::after {
+    @include mq(md){
+        transform: scale(1, 1);
+    }
+}
+
+.button::before {
+	border: rem(1) solid #408F95;
+    content: "";
+    position: absolute;
+    top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	transform: translate(rem(4), rem(4));
+	z-index: -2;
+}
+
+.button::after {
+	background-color: #fff;
+	content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+	height: 100%;
+	transform: scale(0, 1);
+	transform-origin: left top;
+	transition: 0.5s cubic-bezier(0.45, 0, 0.55, 1);
+	width: 100%;
+	z-index: -1;
+}
+
+.button span {
+	padding-right: rem(60);
+	position: relative;
+}
+
+.button span::after {
+	background-image: url(../images/common/button_arrow_white.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	content: "";
+    position: absolute;
+    top: 40.74%;
+    right: 0;
+    width: rem(60);
+	height: rem(7);
+	transform: translateY(-50%);
+	transition: 0.2s background-color;
+}
+
+.button:hover span::after {
+    @include mq(md){
+        background-image: url(../images/common/button_arrow_green.png);
+    }
+}
+
+a:hover {
+    @include mq(md){
+        opacity: 0.5;
+    }
+}

@@ -1,0 +1,50 @@
+@use "global" as *;
+
+/* swiper */
+.swiper-button-prev,
+.swiper-button-next {
+	top: 22px;
+	width: rem(80);
+	height: rem(80);
+	transition: opacity 0.3s;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+	opacity: 0.5;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+	content: "";
+	display: none;
+	width: rem(80);
+	height: rem(80);
+	@include mq(md){
+		display: block;
+	}
+}
+
+/* swiperボタン */
+.swiper-button-prev:after {
+	background-image: url(../images/common/campaign_swiper_left.png);
+    background-repeat: no-repeat;
+	background-size: contain;
+}
+/* swiperボタン */
+.swiper-button-next:after {
+	background-image: url(../images/common/campaign_swiper_right.png);
+    background-repeat: no-repeat;
+	background-size: contain;
+}
+
+.swiper-button-prev,
+.swiper-rtl .swiper-button-next {
+	left: 76.5%;
+}
+
+.swiper-button-next,
+.swiper-rtl .swiper-button-prev {
+	right: 2.2124%;
+}
+/* swiper */

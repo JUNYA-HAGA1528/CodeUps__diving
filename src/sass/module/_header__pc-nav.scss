@@ -1,0 +1,76 @@
+@use "global" as *;
+
+.header__pc-nav {
+	height: inherit;
+}
+
+.pc-nav {
+	color: #fff;
+}
+
+.pc-nav__list {
+    height: inherit;
+	display: flex;
+}
+
+.pc-nav__item {
+	height: inherit;
+}
+
+.pc-nav__item a {
+    height: inherit;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	padding: 0 1.38vw;
+}
+
+.pc-nav__item.pc-nav__item--faq {
+	text-transform: uppercase;
+}
+
+.pc-nav__item a:hover {
+	opacity: 1;
+}
+
+.pc-nav__wrapper {
+	position: relative;
+    text-align: center;
+}
+
+.pc-nav__wrapper::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: rem(-10);
+	background-color: #fff;
+	width: 100%;
+	height: rem(1);
+	transform: scale(0, 1); 
+	transform-origin: center top;
+	transition: transform 0.3s;
+}
+
+.pc-nav__item a:hover .pc-nav__wrapper::after {
+    transform: scale(1, 1);
+}
+
+.pc-nav__en {
+	display: block;
+    font-family:$font-gotu ;
+	font-size: rem(18);
+    font-weight: $normal;
+	line-height: 1;
+}
+
+.pc-nav__en::first-letter {
+	text-transform: capitalize;
+}
+
+.pc-nav__ja {
+	display: block;
+	font-size: rem(10);
+    font-weight: $regular;
+	margin-top: rem(5);
+    line-height: calc(15/10);
+}

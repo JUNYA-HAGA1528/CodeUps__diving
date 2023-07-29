@@ -1,0 +1,127 @@
+@use 'global' as *;
+
+.voice-cards{
+    @include mq(md){
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.voice-cards__item{
+    background-color: #fff;
+    box-shadow: rem(2) rem(2) rem(10) rgba(0, 0, 0, 0.25);
+    padding: rem(16) rem(16) rem(22);
+    @include mq(md){
+        max-width: calc(50% - 2.5rem * 1 / 2 );
+        width: 100%;
+        padding: rem(14) rem(24) rem(22);
+    }
+}
+
+.voice-cards__item + .voice-cards__item{
+    margin-top: rem(40);
+    @include mq(md){
+        margin-top: 0;
+        margin-left: rem(40);
+    }
+}
+
+/* 枚数が増えたときのための処理 */
+.voice-cards__item:nth-child(2n + 1){
+    @include mq(md){
+        margin-left: 0;
+    }
+}
+
+/* 枚数が増えたときのための処理 */
+.voice-cards__item:nth-child(n + 3){
+    @include mq(md){
+        margin-top: 2.5rem;
+    }
+}
+
+.voice-card__head{
+    display: flex;
+    justify-content: space-between;
+}
+
+.voice-card__head-left{
+    width: 47.75%;
+    border-bottom: rem(1) solid #408F95;
+    @include mq(md){
+        width: 58%;
+        padding-top: rem(35);
+    }
+}
+
+.voice-card__head-flex{
+    @include mq(md){
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+}
+
+.voice-card__head-right{
+    width: 48.25%;
+    padding-top: rem(8);
+    @include mq(md){
+        width: 38%;
+    }
+}
+
+.voice-card__head-right img{
+    aspect-ratio: 151/117;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    @include mq(md){
+        aspect-ratio: 180/140;
+    }
+}
+
+.voice-card__gender{
+    font-size: rem(12);
+    font-weight: $regular;
+    line-height: calc(18/12);
+}
+
+.voice-card__meta{
+    display: inline-block;
+    text-align: center;
+    padding: rem(3.2) rem(11.5);
+    font-size: rem(12);
+    font-weight: $regular;
+    line-height: calc(22/12);
+    color: #408F95;
+    border: rem(1) solid #408F95;
+    margin-left: auto;
+    @include mq(md){
+        padding: rem(5.2) rem(14);
+    }
+}
+
+.voice-card__title{
+    margin-top: rem(4);
+    padding-bottom: rem(4);
+    font-size: rem(16);
+    font-weight: $medium;
+    line-height: 1.43;
+    @include mq(md){
+        margin-top: rem(8);
+        font-size: rem(24);
+    }
+}
+
+.voice-card__sentence{
+    margin-top: rem(16);
+    @include mq(md){
+        margin-top: rem(40);
+    }
+}
+
+.voice-card__text{
+    font-size: rem(16);
+    font-weight: $regular;
+    line-height: calc(24/16);
+}

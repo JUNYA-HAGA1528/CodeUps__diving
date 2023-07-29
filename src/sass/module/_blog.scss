@@ -1,0 +1,74 @@
+@use 'global' as *;
+
+
+.blog{
+    position: relative;
+}
+
+.blog__inner{
+    max-width: $max-width;
+}
+
+.blog__bg{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 60%;
+    z-index: -10;
+}
+
+.blog__bg img {
+    @include mq(md){
+        aspect-ratio: 1440/500;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+   
+}
+
+.u-desktop{
+    display: none;
+    @include mq(md){
+        display: block;
+    }
+}
+
+.blog__inner{
+	position: relative;
+}
+
+.blog__inner::before {
+    @include mq(md){
+        background-image: url(../images/common/blog_fish.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+        content: "";
+        top: rem(-75);
+        left: calc(48.2% - min(48.5vw, rem(600)));
+        width: rem(437);
+        /* height指定しないと表示されないので、ここは指定する */
+        height: rem(201);
+    }
+}
+
+
+.blog__list{
+    margin-top: rem(24);
+    padding: 0 rem(6);
+    @include mq(md){
+        margin-top: rem(80);
+        padding: 0;
+    }
+}
+
+.blog__button{
+    margin-top: rem(40);
+    text-align: center;
+    @include mq(md){
+        margin-top: rem(80);
+    }
+}

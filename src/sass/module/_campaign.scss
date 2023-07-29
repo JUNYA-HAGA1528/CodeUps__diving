@@ -1,0 +1,35 @@
+@use "global" as *;
+
+.campaign{
+	overflow: hidden;
+}
+
+.campaign__inner{
+	max-width: $max-width;
+	@include mq(md){
+		position: relative;	
+	}
+}
+
+.swiper-slide{
+	height: auto;
+}
+
+.campaign-cards{
+	margin-top: rem(24);
+	padding:0 0 rem(0.5) rem(0.5); 
+	margin-right: calc(50% - 50vw);
+    @include mq(md){
+		margin-top: rem(40);
+		padding:0 0 rem(0.7) rem(0.7); 
+    }
+}
+
+.campaign__button{
+	margin-top: rem(40);
+	text-align: center;
+	padding-bottom: rem(4);
+	@include mq(md){
+		margin-top: rem(80);
+	}
+}

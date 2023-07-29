@@ -1,0 +1,45 @@
+@use "global" as *;
+
+.footer-nav__list + .footer-nav__list{
+    margin-top: rem(16);
+}
+
+.footer-nav__item a {
+    display: inline-block;
+    text-align: left;
+    width: 100%;
+    color: white;
+    font-size: rem(16);
+    font-weight: $bold;
+    line-height: calc(18/16);
+}
+
+.footer-nav__item--title{
+    position: relative;
+    padding-top: rem(10);
+    padding-bottom: rem(10);
+    padding-left: rem(21);
+    @include mq(md){
+        padding-top: rem(10);
+        padding-bottom: rem(8);
+    }
+}
+
+.footer-nav__item--title a::before {
+    background-image: url(../images/common/starfish.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    content: "";
+    left: 0;
+    width: rem(18);
+    height: rem(18);
+}
+
+.footer-nav__item--normal a {
+    font-weight: $regular;
+    padding-top: rem(12);
+    padding-bottom: rem(12);
+    padding-left: rem(22);
+}

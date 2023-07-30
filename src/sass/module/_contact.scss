@@ -5,19 +5,7 @@
     text-align: center;
 }
 
-.contact__inner{
-    max-width: $max-width;
-}
-
-.contact__wrapper{
-    @include mq(md){
-        display: flex;
-        padding: rem(80) rem(50) rem(74);
-        box-shadow: rem(2) rem(2) rem(5) rgba(0, 0, 0, 0.25);
-    }
-}
-
-.contact__inner::before {
+.contact::before {
     background-image: url(../images/common/contact_fish.png);
     background-position: center;
     background-repeat: no-repeat;
@@ -25,7 +13,7 @@
     position: absolute;
     content: "";
     top: rem(-26);
-    right: calc(30% - 26vw);
+    right: calc(50% - min(46.5%, rem(610)));
     width: rem(109);
     /* height指定しないと表示されないので、ここは指定する */
     height: rem(50);
@@ -37,10 +25,24 @@
         position: absolute;
         content: "";
         top: rem(-40);
-        right: calc(47.6% - min(44.2vw, 40rem));;
+        right: calc(50% - min(48%, rem(670)));
         width: rem(301);
         /* height指定しないと表示されないので、ここは指定する */
         height: rem(138);
+    }
+}
+
+
+.contact__inner{
+    max-width: $max-width;
+}
+
+.contact__wrapper{
+    @include mq(md){
+        display: flex;
+        align-items: center;
+        padding: rem(80) rem(50) rem(74);
+        box-shadow: rem(2) rem(2) rem(5) rgba(0, 0, 0, 0.25);
     }
 }
 
@@ -49,6 +51,7 @@
     @include mq(md){
         padding: 0 rem(82) 0 0;
         width: 53.2%;
+        border-right: rem(1) solid #408F95;
     }
 }
 
@@ -105,12 +108,8 @@
 }
 
 .contact__inquiry{
-    padding-top: rem(45);
     @include mq(md){
         width: 46.8%;
-        padding-top: rem(22);
-        padding-left: rem(20);
-        border-left: rem(1) solid #408F95;
     }
 }
 

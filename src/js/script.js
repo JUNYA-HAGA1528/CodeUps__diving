@@ -9,39 +9,28 @@ jQuery(function ($) {
         $('.js-drawer-menu').addClass("is-open");
         $(this).addClass('is-open');
       }
-      
-      
     });
   
     //====================mvのswiper====================
     var swiper = new Swiper(".fv__Swiper", {
-      effect: "fade",
-      allowTouchMove: false, 
+      loop:true,
       speed: 4000, 
       autoplay: {
       delay: 4000, 
       },
+      effect: "fade",
     });
   
   
     //====================Campaign スライド設定====================
     var swiper = new Swiper(".js-campaign-swiper", {
       
-      slidesPerView: 1.26, //スライド枚数　1.26枚
+      slidesPerView: "auto", //スライド枚数 1.26枚
   
       //〇〇以上の画面幅で〇〇枚のスライドと幅が〇〇pxと設定する
       breakpoints: { 
-        500: {
-          slidesPerView: 1.5,
-          spaceBetween: 30
-        },
         768: {
-          slidesPerView: 2.5,
-          spaceBetween: 30
-        },
-        1200: {
-          slidesPerView: 3.5,
-          spaceBetween: 40
+          spaceBetween: 40,
         },
       },
   

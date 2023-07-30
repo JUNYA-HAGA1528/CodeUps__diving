@@ -1,11 +1,10 @@
 @use 'global' as *;
 
-.voice__inner{
+.voice{
 	position: relative;
-    max-width: $max-width;
 }
 
-.voice__inner::before {
+.voice::before {
     @include mq(md){
         background-image: url(../images/common/voice_fish.png);
         background-position: center;
@@ -14,7 +13,7 @@
         position: absolute;
         content: "";
         top: rem(-119);
-        left: calc(48.2% - min(48.5vw, rem(600)));
+        left: calc(50% - min(48%, rem(623)));
         width: rem(301);
         /* height指定しないと表示されないので、ここは指定する */
         height: rem(138);
@@ -30,11 +29,16 @@
         position: absolute;
         content: "";
         bottom: rem(-73);
-        right: calc(58.5% - min(44.2vw, 40rem));;
+        right: calc(50% - min(48%, rem(540)));
         width: rem(71);
         /* height指定しないと表示されないので、ここは指定する */
         height: rem(162);
     }
+}
+
+.voice__inner{
+	position: relative;
+    max-width: $max-width;
 }
 
 .voice__list{

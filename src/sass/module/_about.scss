@@ -1,11 +1,10 @@
 @use "global" as *;
 
-.about__inner{
+.about{
 	position: relative;
-    max-width: $max-width;
 }
 
-.about__inner::before {
+.about::before {
     @include mq(md){
         background-image: url(../images/common/about_sango.png);
         background-position: center;
@@ -14,11 +13,17 @@
         position: absolute;
         content: "";
         bottom: rem(-88.8);
-        right: calc(50% - min(44.2vw, rem(640)));
+        right: calc(50% - min(48%, rem(640)));
         width: rem(194);
         /* height指定しないと表示されないので、ここは指定する */
         height: rem(181);
+        z-index: 100;
     }
+}
+
+.about__inner{
+	position: relative;
+    max-width: $max-width;
 }
 
 .about__img{

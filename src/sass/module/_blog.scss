@@ -5,7 +5,24 @@
     position: relative;
 }
 
+.blog::before {
+    @include mq(md){
+        background-image: url(../images/common/blog_fish.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+        content: "";
+        top: rem(20);
+        left: calc(50% - min(48%, rem(623)));
+        width: rem(376.51);
+        /* height指定しないと表示されないので、ここは指定する */
+        height: rem(120.76);
+    }
+}
+
 .blog__inner{
+    position: relative;
     max-width: $max-width;
 }
 
@@ -34,27 +51,6 @@
         display: block;
     }
 }
-
-.blog__inner{
-	position: relative;
-}
-
-.blog__inner::before {
-    @include mq(md){
-        background-image: url(../images/common/blog_fish.png);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: contain;
-        position: absolute;
-        content: "";
-        top: rem(-75);
-        left: calc(48.2% - min(48.5vw, rem(600)));
-        width: rem(437);
-        /* height指定しないと表示されないので、ここは指定する */
-        height: rem(201);
-    }
-}
-
 
 .blog__list{
     margin-top: rem(24);

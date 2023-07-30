@@ -22,7 +22,7 @@
 	display: flex;
     justify-content: center;
     align-items: center;
-	padding: 0 1.38vw;
+	padding:0 min(1.38vw, 20px);
 }
 
 .pc-nav__item.pc-nav__item--faq {

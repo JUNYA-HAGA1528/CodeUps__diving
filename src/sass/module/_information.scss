@@ -36,7 +36,7 @@
 .information__content{
     margin-top: rem(24);
     @include mq(md){
-        margin-top: rem(-6);
+        margin-top: rem(-6); /*---ピクセルパーフェクトのために指定---*/
         margin-left: rem(48);
         width: 45.6%;
     }

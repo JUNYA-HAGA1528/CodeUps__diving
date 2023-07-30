@@ -1,6 +1,5 @@
 @use 'global' as *;
 
-
 .blog{
     position: relative;
 }
@@ -21,11 +20,6 @@
     }
 }
 
-.blog__inner{
-    position: relative;
-    max-width: $max-width;
-}
-
 .blog__bg{
     position: absolute;
     left: 0;
@@ -42,7 +36,6 @@
         height: 100%;
         object-fit: cover;
     }
-   
 }
 
 .u-desktop{
@@ -50,6 +43,11 @@
     @include mq(md){
         display: block;
     }
+}
+
+.blog__inner{
+    position: relative;
+    max-width: $max-width;
 }
 
 .blog__list{

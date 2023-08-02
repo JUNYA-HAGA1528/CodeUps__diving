@@ -7,7 +7,7 @@
 
 .voice-card__head-left{
     width: 47.75%;
-    border-bottom: rem(1) solid #408F95;
+    border-bottom: rem(1) solid $green;
     @include mq(md){
         width: 58%;
         padding-top: rem(35);

@@ -5,7 +5,7 @@
 }
 
 .pc-nav {
-	color: #fff;
+	color: $white;
 }
 
 .pc-nav__list {
@@ -43,7 +43,7 @@
     content: "";
     left: 0;
     bottom: rem(-10);
-	background-color: #fff;
+	background-color: $white;
 	width: 100%;
 	height: rem(1);
 	transform: scale(0, 1); 

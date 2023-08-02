@@ -51,12 +51,12 @@
     @include mq(md){
         padding: 0 rem(82) 0 0;
         width: 53.2%;
-        border-right: rem(1) solid #408F95;
+        border-right: rem(1) solid $green;
     }
 }
 
 .contact__information-img{
-    border-bottom: rem(1) solid #408F95;
+    border-bottom: rem(1) solid $green;
     @include mq(md){
         padding-bottom: rem(4);
     }
@@ -126,11 +126,11 @@
 
 .contact__inquiry-title__en::first-letter {
 	text-transform: capitalize;
-    color: #408F95;
+    color: $green;
 }
 
 .contact__inquiry-title__jp{
-	color: #408F95;
+	color: $green;
 	font-size: rem(12);
 	font-weight: $regular;
     line-height: calc(1);
@@ -138,7 +138,7 @@
 
 .contact__inquiry-title__guide{
     margin-top: rem(8);
-    color: #408F95;
+    color: $green;
     font-size: rem(14);
     font-weight: $regular;
     line-height: calc(18/14);

@@ -47,7 +47,7 @@
     font-weight: $bold;
     line-height: calc(24/20);
     padding-bottom: rem(4);
-    border-bottom: rem(1) solid #408F95;
+    border-bottom: rem(1) solid $green;
     @include mq(md){
         font-size: rem(24);
         line-height: 1;

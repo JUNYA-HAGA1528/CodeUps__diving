@@ -2,9 +2,9 @@
 
 .button{
     position: relative;
-	background-color: #408F95;
-	border: rem(1) solid #408F95;
-	color: #fff;
+	background-color: $green;
+	border: rem(1) solid $green;
+	color: $white;
 	display: inline-block;
     padding: rem(15) 0;
     width: rem(202);
@@ -20,7 +20,7 @@
 
 .button:hover {
     @include mq(md){
-        color: #408F95;
+        color: $green;
         opacity: 1;
     }
 }
@@ -32,7 +32,7 @@
 }
 
 .button::before {
-	border: rem(1) solid #408F95;
+	border: rem(1) solid $green;
     content: "";
     position: absolute;
     top: 0;
@@ -44,7 +44,7 @@
 }
 
 .button::after {
-	background-color: #fff;
+	background-color: $white;
 	content: "";
     position: absolute;
     top: 0;

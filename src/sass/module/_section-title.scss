@@ -18,25 +18,25 @@
 .section-title__en--white,
 .section-title__jp--white{
 	@include mq(md){
-		color: #fff;
+		color: $white;
 	}
 }
 
 .section-title__en::first-letter {
 	text-transform: capitalize;
-    color: #408F95;
+    color: $green;
 }
 
 .section-title__en--white::first-letter {
 	@include mq(md){
 		text-transform: capitalize;
-    	color: #fff;
+    	color: $white;
 	}
 }
 
 .section-title__jp{
 	margin-top: rem(6);
-	color: #408F95;
+	color: $green;
 	font-size: rem(12);
 	font-weight: $regular;
     line-height: calc(18/12);

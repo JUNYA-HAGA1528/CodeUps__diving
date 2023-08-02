@@ -90,13 +90,13 @@
 }
 
 .about__heading-title{
-	color: #408F95;
+	color: $green;
 	font-family: $font-gotu;
     font-size: rem(40);
     font-weight: $normal;
     line-height: 1;
     @include mq(md){
-        color: #fff;
+        color: $white;
         font-size: rem(80);
         line-height: calc(100/80);
    }
@@ -116,7 +116,7 @@
     font-weight: $regular;
 	line-height: calc(24/16);
     @include mq(md){
-        color: #fff;
+        color: $white;
     }
 }
 

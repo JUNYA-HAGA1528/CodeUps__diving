@@ -8,7 +8,7 @@
 }
 
 .blog-cards__item{
-    background-color: #fff;
+    background-color: $white;
     box-shadow: rem(2) rem(2) rem(10) rgba(0, 0, 0, 0.25);
     padding: rem(16) rem(16) rem(23) rem(16);
     @include mq(md){

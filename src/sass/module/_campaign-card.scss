@@ -30,8 +30,8 @@
 .campaign-card__meta{
 	display: inline-block;
 	padding: rem(3) rem(11);
-	border: rem(1) solid #408F95;
-	color: #408F95;
+	border: rem(1) solid $green;
+	color: $green;
 	font-size: rem(12);
 	font-weight: $regular;
 	line-height: calc(22/12);
@@ -44,7 +44,7 @@
 .campaign-card__title{
 	margin-top: rem(4);
 	padding-bottom: rem(8);
-	border-bottom: rem(1) solid #408F95;
+	border-bottom: rem(1) solid $green;
 	font-size: rem(16);
 	font-weight: $medium;
 	line-height: calc(24/16);
@@ -101,7 +101,7 @@
 }
 
 .campaign-card__price-after {
-	color: #408F95;
+	color: $green;
 	font-size: rem(32);
     line-height: 1;
 	margin-left: rem(16);

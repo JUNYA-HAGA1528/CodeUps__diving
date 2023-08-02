@@ -13,12 +13,13 @@ jQuery(function ($) {
   
     //====================mvのswiper====================
     var swiper = new Swiper(".js-fv-swiper", {
-      loop:true,
-      speed: 4000, 
-      autoplay: {
-      delay: 4000, 
-      },
+      loop: true,
       effect: "fade",
+      speed: 1000,
+      allowTouchMove: false,
+      autoplay: {
+      delay: 1000,
+      },
     });
   
   

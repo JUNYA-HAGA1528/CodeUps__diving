@@ -11,18 +11,19 @@
     object-fit: cover;
 }
   
-.fv__text{
+.heading{
     color: #fff;
     position: absolute;
     top: 43.8%;
     width: 100%;
     text-align: center;
+    z-index: 100;
     @include mq(md){
         top: 47%;
     }
 }
 
-.fv__text-title{
+.heading__title{
     font-family: $font-lato;
     font-size: rem(40);
     font-weight: $regular;
@@ -37,7 +38,7 @@
     }
 }
 
-.fv__text-subtitle{
+.heading__subtitle{
     font-family: $font-gotu;
     font-size: rem(20);
     font-weight: $normal;

@@ -90,7 +90,7 @@
     }
 }
 
-.footer__container-space{
+.footer__container--space{
     @include mq(md){
         padding-left: rem(18);
     }

@@ -12,7 +12,7 @@ jQuery(function ($) {
     });
   
     //====================mvのswiper====================
-    var swiper = new Swiper(".fv__Swiper", {
+    var swiper = new Swiper(".js-fv-swiper", {
       loop:true,
       speed: 4000, 
       autoplay: {

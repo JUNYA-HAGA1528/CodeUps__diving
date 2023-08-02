@@ -41,7 +41,7 @@
     min-height: rem(500);
 }
 
-.sp-nav__list + .sp-nav__list{
+.sp-nav__items + .sp-nav__items{
     margin-top: rem(16);
 }
 
@@ -58,11 +58,11 @@
     line-height: calc(18/16);
 }
 
-.sp-nav__item--title {
+.sp-nav__item-title {
     position: relative;
 }
 
-.sp-nav__item--title a::before{
+.sp-nav__item-title a::before{
     background-image: url(../images/common/starfish.png);
     background-position: center;
     background-repeat: no-repeat;

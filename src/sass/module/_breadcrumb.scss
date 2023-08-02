@@ -1,0 +1,40 @@
+@use "global" as *;
+
+/*パンくずリストの作成*/
+.breadcrumb {
+    z-index: 1;
+  }
+ 
+  /*横並びにするためのものだが、変化しないので無くてもいいかも*/
+  .breadcrumb:before,
+  .breadcrumb:after {
+    content: "";
+    display: table;
+  }
+  
+  .breadcrumb__items{
+    white-space: nowrap;/*改行や空白が省略される（特に変化しない…）*/
+    text-overflow: ellipsis;
+  }
+  
+  .breadcrumb__item{
+    display: inline-block;/*タブを横並べにする*/
+  }
+
+  /*矢印を表示*/
+  .breadcrumb__item::after {
+    padding: 0 rem(5);/*矢印の幅*/
+    content: ">";
+    color: #555;
+  }
+  
+  .breadcrumb__item:last-child:after {
+    content: "";/*最終位置の矢印を無くす*/
+  }
+
+  .breadcrumb__link{
+    font-size: rem(14);
+    font-weight: $regular;
+    text-transform: uppercase;
+
+  }

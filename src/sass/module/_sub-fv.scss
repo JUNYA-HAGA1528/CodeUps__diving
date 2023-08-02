@@ -1,0 +1,34 @@
+@use "global" as *;
+
+.sub-fv__inner{
+    position: relative;
+}
+
+.sub-fv__heading{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.sub-fv__text{
+    color: #fff;
+    font-family: $font-lato;
+    font-size: rem(40);
+    font-weight: $regular;
+    line-height: 1;
+    @include mq(md){
+        font-size: rem(80);
+        line-height: calc(100/80);
+    }
+}
+
+.sub-fv img{
+    aspect-ratio: 375 / 460;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    @include mq("md") {
+        aspect-ratio: 1440 / 548;
+    }
+}

@@ -105,4 +105,15 @@ jQuery(function ($) {
           }
     });
     });
+
+
+    //====================campaign タブ選択====================
+    $('.js_tab li').click(function() {
+      var index = $('.js_tab li').index(this);
+
+      $('.js_tab li').removeClass('active');
+      $(this).addClass('active');
+      $('.js_area ul').removeClass('js_show').eq(index).addClass('js_show');
+
+  });
   });  

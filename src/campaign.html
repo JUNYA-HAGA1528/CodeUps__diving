@@ -219,201 +219,270 @@
         </div>
     </header>
 
-    <!-- fv -->
+
+
+    <!-- sub-fv -->
+    <section class="campaign-fv sub-fv">
+        <div class="sub-fv__inner">
+            <picture>
+                <source srcset="./assets/images/common/campaign_fv_pc.jpg" media="(min-width: 768px)">
+                <img src="./assets/images/common/campaign_fv_sp.jpg" alt="浜辺">
+            </picture>
+
+            <div class="sub-fv__heading">
+                <h2 class="sub-fv__text">Campaign</h2>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- breadcrumb -->
+    <section class="campaign-breadcrumb breadcrumb">
+        <div class="breadcrumb__inner inner">
+            <ol class="breadcrumb__items">
+                <!-- 1つめ -->
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="breadcrumb__item">
+                    <a itemprop="item" href="index.html" class="breadcrumb__link">
+                        <span itemprop="name">TOP</span>
+                    </a>
+                    <meta itemprop="position" content="1" />
+                </li>
+    
+                <!-- 2つめ -->
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="breadcrumb__item">
+                    <span itemprop="item" href="campaign.html" class="breadcrumb__link">
+                        <span itemprop="name">キャンペーン</span>
+                    </span>
+                    <meta itemprop="position" content="2" />
+                </li>
+            </ol>
+        </div>
+    </section>
     
     
     
     <main>
-        <!-- campaign -->
-        <section class="top-campaign campaign">
-            <div class="campaign__inner inner">
+       
+        <section class="layout-campaign campaign-body">
+            
+            <!-- info -->
+            <div class="notice_inner inner">
+                <ul class="notice_list tab js_tab">
+                    <li class="info_item tab active">営業情報</li>
+                    <li class="info_item tab">その他</li>
+                    <li class="info_item tab">その他</li>
+                    <li class="info_item tab">その他</li>
+                </ul>
+    
 
-                <!-- タイトル 再利用 -->
-                <div class="campaign__title section-title">
-                    <p class="section-title__en">campaign</p>
-                    <h2 class="section-title__jp">キャンペーン</h2>
-                </div>
-                <!-- タイトル 再利用 -->
 
-                <div class="campaign__slider campaign-cards swiper js-campaign-swiper">
-                    <ul class="campaign-cards__items swiper-wrapper">
-                        <li class="campaign-cards__item  swiper-slide">
-                            <div class="campaign-card">
-                                <div class="campaign-card__img">
-                                    <img src="./assets/images/common/campaign1.jpg" alt="魚が泳ぐ">
-                                </div>
-                                <div class="campaign-card__body">
-                                    <div class="campaign-card__heading">
-                                        <p class="campaign-card__meta">ライセンス講習</p>
+
+
+
+                <div class="js_area">
+                    <ul class="notice_list sales js_show">
+                        <div class="info_flex">
+                            <li class="info_item sales">
+                                <a href="#">
+                                    <img src="img/news01.jpg" alt="お知らせサムネイル">
+                                    <div class="info_wrap">
+                                        <time class="info_time">2020.12.24</time>
+                                        <p class="info_tit">年末最後の営業日は27日になります。</p>
                                     </div>
-                                    <h3 class="campaign-card__title">ライセンス取得</h3>
-                                    <div class="campaign-card__wrapper">
-                                        <p class="campaign-card__subtitle">全部コミコミ(お一人様)</p>
-                                        <div class="campaign-card__price">
-                                            <div class="campaign-card__price-before">&yen;56&#44;000</div>
-                                            <div class="campaign-card__price-after">&yen;46&#44;000</div>
-                                        </div>
+                                </a>
+                            </li>
+                            <li class="info_item sales">
+                                <a href="#">
+                                    <img src="img/news01.jpg" alt="お知らせサムネイル">
+                                    <div class="info_wrap">
+                                        <time class="info_time">2020.12.24</time>
+                                        <p class="info_tit">年末最後の営業日は27日になります。</p>
                                     </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="campaign-cards__item  swiper-slide">
-                            <div class="campaign-card">
-                                <div class="campaign-card__img">
-                                    <img src="./assets/images/common/campaign2.jpg" alt="波辺と船">
-                                </div>
-                                <div class="campaign-card__body">
-                                    <div class="campaign-card__heading">
-                                        <p class="campaign-card__meta">体験ダイビング</p>
+                                </a>
+                            </li>
+                        </div>
+                        <div class="info_flex">
+                            <li class="info_item sales">
+                                <a href="#">
+                                    <img src="img/news01.jpg" alt="お知らせサムネイル">
+                                    <div class="info_wrap">
+                                        <time class="info_time">2020.12.24</time>
+                                        <p class="info_tit">年末最後の営業日は27日になります。</p>
                                     </div>
-                                    <h3 class="campaign-card__title">貸切体験ダイビング</h3>
-                                    <div class="campaign-card__wrapper">
-                                        <p class="campaign-card__subtitle">全部コミコミ(お一人様)</p>
-                                        <div class="campaign-card__price">
-                                            <div class="campaign-card__price-before">&yen;24&#44;000</div>
-                                            <div class="campaign-card__price-after">&yen;18&#44;000</div>
-                                        </div>
+                                </a>
+                            </li>
+                            <li class="info_item sales">
+                                <a href="#">
+                                    <img src="img/news01.jpg" alt="お知らせサムネイル">
+                                    <div class="info_wrap">
+                                        <time class="info_time">2020.12.24</time>
+                                        <p class="info_tit">年末最後の営業日は27日になります。</p>
                                     </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="campaign-cards__item  swiper-slide">
-                            <div class="campaign-card">
-                                <div class="campaign-card__img">
-                                    <img src="./assets/images/common/campaign3.jpg" alt="クラゲの大群">
-                                </div>
-                                <div class="campaign-card__body">
-                                    <div class="campaign-card__heading">
-                                        <p class="campaign-card__meta">体験ダイビング</p>
+                                </a>
+                            </li>
+                        </div>
+                        <div class="info_flex">
+                            <li class="info_item sales">
+                                <a href="#">
+                                    <img src="img/news01.jpg" alt="お知らせサムネイル">
+                                    <div class="info_wrap">
+                                        <time class="info_time">2020.12.24</time>
+                                        <p class="info_tit">年末最後の営業日は27日になります。</p>
                                     </div>
-                                    <h3 class="campaign-card__title">ナイトダイビング</h3>
-                                    <div class="campaign-card__wrapper">
-                                        <p class="campaign-card__subtitle">全部コミコミ(お一人様)</p>
-                                        <div class="campaign-card__price">
-                                            <div class="campaign-card__price-before">&yen;10&#44;000</div>
-                                            <div class="campaign-card__price-after">&yen;8&#44;000</div>
-                                        </div>
+                                </a>
+                            </li>
+                            <li class="info_item sales">
+                                <a href="#">
+                                    <img src="img/news01.jpg" alt="お知らせサムネイル">
+                                    <div class="info_wrap">
+                                        <time class="info_time">2020.12.24</time>
+                                        <p class="info_tit">年末最後の営業日は27日になります。</p>
                                     </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="campaign-cards__item  swiper-slide">
-                            <div class="campaign-card">
-                                <div class="campaign-card__img">
-                                    <img src="./assets/images/common/campaign4.jpg" alt="水面にいるダイバー">
-                                </div>
-                                <div class="campaign-card__body">
-                                    <div class="campaign-card__heading">
-                                        <p class="campaign-card__meta">ファンダイビング</p>
-                                    </div>
-                                    <h3 class="campaign-card__title">貸切ファンダイビング</h3>
-                                    <div class="campaign-card__wrapper">
-                                        <p class="campaign-card__subtitle">全部コミコミ(お一人様)</p>
-                                        <div class="campaign-card__price">
-                                            <div class="campaign-card__price-before">&yen;20&#44;000</div>
-                                            <div class="campaign-card__price-after">&yen;16&#44;000</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="campaign-cards__item  swiper-slide">
-                            <div class="campaign-card">
-                                <div class="campaign-card__img">
-                                    <img src="./assets/images/common/campaign1.jpg" alt="魚が泳ぐ">
-                                </div>
-                                <div class="campaign-card__body">
-                                    <div class="campaign-card__heading">
-                                        <p class="campaign-card__meta">ライセンス講習</p>
-                                    </div>
-                                    <h3 class="campaign-card__title">ライセンス取得</h3>
-                                    <div class="campaign-card__wrapper">
-                                        <p class="campaign-card__subtitle">全部コミコミ(お一人様)</p>
-                                        <div class="campaign-card__price">
-                                            <div class="campaign-card__price-before">&yen;56&#44;000</div>
-                                            <div class="campaign-card__price-after">&yen;46&#44;000</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="campaign-cards__item  swiper-slide">
-                            <div class="campaign-card">
-                                <div class="campaign-card__img">
-                                    <img src="./assets/images/common/campaign2.jpg" alt="波辺と船">
-                                </div>
-                                <div class="campaign-card__body">
-                                    <div class="campaign-card__heading">
-                                        <p class="campaign-card__meta">体験ダイビング</p>
-                                    </div>
-                                    <h3 class="campaign-card__title">貸切体験ダイビング</h3>
-                                    <div class="campaign-card__wrapper">
-                                        <p class="campaign-card__subtitle">全部コミコミ(お一人様)</p>
-                                        <div class="campaign-card__price">
-                                            <div class="campaign-card__price-before">&yen;24&#44;000</div>
-                                            <div class="campaign-card__price-after">&yen;18&#44;000</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="campaign-cards__item  swiper-slide">
-                            <div class="campaign-card">
-                                <div class="campaign-card__img">
-                                    <img src="./assets/images/common/campaign3.jpg" alt="クラゲの大群">
-                                </div>
-                                <div class="campaign-card__body">
-                                    <div class="campaign-card__heading">
-                                        <p class="campaign-card__meta">体験ダイビング</p>
-                                    </div>
-                                    <h3 class="campaign-card__title">ナイトダイビング</h3>
-                                    <div class="campaign-card__wrapper">
-                                        <p class="campaign-card__subtitle">全部コミコミ(お一人様)</p>
-                                        <div class="campaign-card__price">
-                                            <div class="campaign-card__price-before">&yen;10&#44;000</div>
-                                            <div class="campaign-card__price-after">&yen;8&#44;000</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="campaign-cards__item  swiper-slide">
-                            <div class="campaign-card">
-                                <div class="campaign-card__img">
-                                    <img src="./assets/images/common/campaign4.jpg" alt="水面にいるダイバー">
-                                </div>
-                                <div class="campaign-card__body">
-                                    <div class="campaign-card__heading">
-                                        <p class="campaign-card__meta">ファンダイビング</p>
-                                    </div>
-                                    <h3 class="campaign-card__title">貸切ファンダイビング</h3>
-                                    <div class="campaign-card__wrapper">
-                                        <p class="campaign-card__subtitle">全部コミコミ(お一人様)</p>
-                                        <div class="campaign-card__price">
-                                            <div class="campaign-card__price-before">&yen;20&#44;000</div>
-                                            <div class="campaign-card__price-after">&yen;16&#44;000</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        
+                                </a>
+                            </li>
+                        </div>
                     </ul>
-                </div>
-                <div class="swiper-button">
-                    <div class="swiper-button-prev js-campaign-button-prev u-desktop"></div>
-                    <div class="swiper-button-next js-campaign-button-next u-desktop"></div>
-                </div>
-                <div class="campaign__button">
-                    <a href="campaign.html" class="button"><span>View&nbsp;more</span></a>
+                    <ul class="notice_list other">
+                        <div class="info_flex">
+                            <li class="info_item sales">
+                                <a href="#">
+                                    <img src="img/news01.jpg" alt="お知らせサムネイル">
+                                    <div class="info_wrap">
+                                        <time class="info_time">2020.12.24</time>
+                                        <p class="info_tit">年末最後の営業日は27日になります。</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="info_item sales">
+                                <a href="#">
+                                    <img src="img/news01.jpg" alt="お知らせサムネイル">
+                                    <div class="info_wrap">
+                                        <time class="info_time">2020.12.24</time>
+                                        <p class="info_tit">年末最後の営業日は27日になります。</p>
+                                    </div>
+                                </a>
+                            </li>
+                        </div>
+                        <div class="info_flex">
+                            <li class="info_item sales">
+                                <a href="#">
+                                    <img src="img/news01.jpg" alt="お知らせサムネイル">
+                                    <div class="info_wrap">
+                                        <time class="info_time">2020.12.24</time>
+                                        <p class="info_tit">年末最後の営業日は27日になります。</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="info_item sales">
+                                <a href="#">
+                                    <img src="img/news01.jpg" alt="お知らせサムネイル">
+                                    <div class="info_wrap">
+                                        <time class="info_time">2020.12.24</time>
+                                        <p class="info_tit">年末最後の営業日は27日になります。</p>
+                                    </div>
+                                </a>
+                            </li>
+                        </div>
+                        <div class="info_flex">
+                            <li class="info_item sales">
+                                <a href="#">
+                                    <img src="img/news01.jpg" alt="お知らせサムネイル">
+                                    <div class="info_wrap">
+                                        <time class="info_time">2020.12.24</time>
+                                        <p class="info_tit">年末最後の営業日は27日になります。</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="info_item sales">
+                                <a href="#">
+                                    <img src="img/news01.jpg" alt="お知らせサムネイル">
+                                    <div class="info_wrap">
+                                        <time class="info_time">2020.12.24</time>
+                                        <p class="info_tit">年末最後の営業日は27日になります。</p>
+                                    </div>
+                                </a>
+                            </li>
+                        </div>
+                    </ul>
+                    <ul class="notice_list other">
+                        <div class="info_flex">
+                            <li class="info_item sales">
+                                <a href="#">
+                                    <img src="img/news01.jpg" alt="お知らせサムネイル">
+                                    <div class="info_wrap">
+                                        <time class="info_time">2020.12.24</time>
+                                        <p class="info_tit">年末最後の営業日は27日になります。</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="info_item sales">
+                                <a href="#">
+                                    <img src="img/news01.jpg" alt="お知らせサムネイル">
+                                    <div class="info_wrap">
+                                        <time class="info_time">2020.12.24</time>
+                                        <p class="info_tit">年末最後の営業日は27日になります。</p>
+                                    </div>
+                                </a>
+                            </li>
+                        </div>
+                        <div class="info_flex">
+                            <li class="info_item sales">
+                                <a href="#">
+                                    <img src="img/news01.jpg" alt="お知らせサムネイル">
+                                    <div class="info_wrap">
+                                        <time class="info_time">2020.12.24</time>
+                                        <p class="info_tit">年末最後の営業日は27日になります。</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="info_item sales">
+                                <a href="#">
+                                    <img src="img/news01.jpg" alt="お知らせサムネイル">
+                                    <div class="info_wrap">
+                                        <time class="info_time">2020.12.24</time>
+                                        <p class="info_tit">年末最後の営業日は27日になります。</p>
+                                    </div>
+                                </a>
+                            </li>
+                        </div>
+                        <div class="info_flex">
+                            <li class="info_item sales">
+                                <a href="#">
+                                    <img src="img/news01.jpg" alt="お知らせサムネイル">
+                                    <div class="info_wrap">
+                                        <time class="info_time">2020.12.24</time>
+                                        <p class="info_tit">年末最後の営業日は27日になります。</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="info_item sales">
+                                <a href="#">
+                                    <img src="img/news01.jpg" alt="お知らせサムネイル">
+                                    <div class="info_wrap">
+                                        <time class="info_time">2020.12.24</time>
+                                        <p class="info_tit">年末最後の営業日は27日になります。</p>
+                                    </div>
+                                </a>
+                            </li>
+                        </div>
+                    </ul>
                 </div>
             </div>
         </section>
+        
+
+
+
+
+
+
+
 
         
 
         <!-- contact -->
-        <section class="top-contact contact">
+        <!-- <section class="top-contact contact">
             <div class="contact__inner inner">
                 <div class="contact__wrapper">
                     <div class="contact__information">
@@ -447,7 +516,7 @@
                 </div>
             </div>
         </section>
-    </main>
+    </main> -->
     
     <!-- footer -->
     <footer class="top-footer footer">

@@ -107,13 +107,4 @@ jQuery(function ($) {
     });
 
 
-    //====================campaign タブ選択====================
-    $('.js-campaign-tab li').click(function() {
-      var index = $('.js-campaign-tab li').index(this);
-
-      $('.js-campaign-tab li').removeClass('active');
-      $(this).addClass('active');
-      $('.js-campaign-area ul').removeClass('js-campaign-show').eq(index).addClass('js-campaign-show');
-
-  });
   });  

@@ -32,7 +32,6 @@
     }
 }
 
-
 .contact__inner{
     max-width: $max-width;
 }
@@ -112,6 +111,7 @@
     @include mq(md){
         width: 46.8%;
         margin-top: 0;
+        padding-left: rem(24);
     }
 }
 

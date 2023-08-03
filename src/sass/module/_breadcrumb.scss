@@ -13,7 +13,7 @@
   }
   
   .breadcrumb__items{
-    white-space: nowrap;/*改行や空白が省略される（特に変化しない…）*/
+    white-space: nowrap;
     text-overflow: ellipsis;
   }
   
@@ -23,7 +23,7 @@
 
   /*矢印を表示*/
   .breadcrumb__item::after {
-    padding: 0 rem(5);/*矢印の幅*/
+    padding: 0 rem(1.6) 0 rem(3.2);/*矢印の幅*/
     content: ">";
     color: #0D2936;
   }

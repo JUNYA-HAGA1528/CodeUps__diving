@@ -3,7 +3,7 @@
 .campaign-category__tabs {
     display: flex;
     flex-wrap: wrap;
-    gap: rem(16) rem(21);
+    gap: rem(16.5) rem(21);
     @include mq("md") {
         gap: rem(0) rem(32);
     }

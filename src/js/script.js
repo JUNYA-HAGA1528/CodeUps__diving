@@ -1,6 +1,6 @@
 jQuery(function ($) {
 
-    //====================ハンバーガーメニュー====================
+    //ハンバーガーメニュー
     $('.js-hamburger').on('click', function () {
       if ($('.js-hamburger').hasClass('is-open')) {
         $('.js-drawer-menu').removeClass("is-open");
@@ -11,19 +11,20 @@ jQuery(function ($) {
       }
     });
   
-    //====================mvのswiper====================
+
+    //mv swiper
     var swiper = new Swiper(".js-fv-swiper", {
       loop: true,
       effect: "fade",
-      speed: 1000,
+      speed: 3000,
       allowTouchMove: false,
       autoplay: {
-      delay: 1000,
+      delay: 5000,
       },
     });
   
   
-    //====================Campaign スライド設定====================
+    //Campaign swiper
     var swiper = new Swiper(".js-campaign-swiper", {
       
       slidesPerView: "auto", //スライド枚数 1.26枚
@@ -50,7 +51,7 @@ jQuery(function ($) {
     });
   
   
-    //====================スクロールトップ====================
+    //スクロールトップ
     $(function () {
       // スクロールしたら「トップに戻る」ボタンが表示される
       const toTopButton = $(".js-scroll-top");
@@ -80,7 +81,7 @@ jQuery(function ($) {
     });
   
   
-    //====================スクロールで背景色の後に画像やテキスト====================
+    //スクロールで背景色の後に画像やテキスト(colorbox)
     var box = $('.js-colorbox'),
     speed = 700;  
   
@@ -107,13 +108,8 @@ jQuery(function ($) {
     });
 
 
-
-
-
-
     //====================下層ページ====================
-
-    //=================campaignのタブ=======================
+    //campaignのタブ
     $(function () {
       // 最初のコンテンツは表示
       $(".js-campaign-wrapper:first-of-type").css("display", "block");

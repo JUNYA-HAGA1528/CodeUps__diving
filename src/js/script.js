@@ -103,7 +103,31 @@ jQuery(function ($) {
           })
             counter = 1;
           }
+      });
     });
+
+
+
+
+
+
+    //====================下層ページ====================
+
+    //=================campaignのタブ=======================
+    $(function () {
+      // 最初のコンテンツは表示
+      $(".js-campaign-wrapper:first-of-type").css("display", "block");
+      // タブをクリックすると
+      $(".js-campaign-tab").on("click", function () {
+        // 現在選択されているタブからcurrentを外す
+        $(".current").removeClass("current");
+        // クリックされたタブにcurrentクラスを付与
+        $(this).addClass("current");
+        // クリックされた要素が何番目か取得（クリックしたタブのインデックス番号を取得）
+        const index = $(this).index();
+        // クリックしたタブのインデックス番号と同じコンテンツを表示
+        $(".js-campaign-wrapper").hide().eq(index).fadeIn(300);
+      });
     });
 
 

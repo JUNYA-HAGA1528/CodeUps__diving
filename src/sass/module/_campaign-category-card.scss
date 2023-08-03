@@ -28,11 +28,9 @@
 }
 
 .campaign-category-card__heading{
-    font-size: 0;
     display: flex;
     flex-wrap: wrap;
-    column-gap: rem(10);
-    row-gap: rem(10);
+    gap: rem(10);
 }
 
 .campaign-category-card__meta{
@@ -40,10 +38,11 @@
     border: rem(1) solid $green;
     padding: rem(8) rem(12);
     font-size: rem(12);
-    line-height: 1;
+    font-weight: $regular;
+    line-height: calc(22/12);
     color: $green;
     @include mq("md") {
-        padding: rem(10) rem(16);
+        padding: rem(5) rem(16);
     }
 }
 
@@ -51,57 +50,55 @@
     margin-top: rem(8);
     font-size: rem(16);
     font-weight: $medium;
-    line-height: 1.5;
+    line-height: calc(24/16);
     padding-bottom: rem(3);
     border-bottom: rem(1) solid $green;
     
     @include mq("md") {
         margin-top: rem(10);
         padding-bottom: rem(2);
+        font-size: rem(24);
+        padding-bottom: rem(4);
+        line-height: calc(24/16);
     }
 }
 
-.campaign-category-card__wrap {
+.campaign-category-card__wrapper{
     margin-top: rem(15);
     padding: 0 rem(19) 0;
-
     @include mq("md") {
         margin-top: rem(23);
     }
 }
 
-.campaign-category-card__text {
+.campaign-category-card__subtitle{
     text-align: center;
-    line-height: 1;
     font-size: rem(14);
-
+    font-weight: $regular;
+    line-height: calc(24/14);
     @include mq("md") {
         font-size: rem(16);
+        line-height: calc(24/16);
     }
 }
 
 .campaign-category-card__price {
-    margin-top: rem(3);
+    margin-top: rem(8);
     display: flex;
     align-items: center;
     justify-content: center;
-    
     font-weight: $bold;
-
-    @include mq(md) {
-        margin-top: rem(2);
-    }
 }
 
 .campaign-category-card__price-before {
-    font-size: rem(20);
-    font-weight: $bold;
-    line-height: 1;
+    position: relative;
     display: flex;
     align-items: center;
     padding-top: rem(3);
-    position: relative;
-
+    font-family: $font-lato;
+    font-size: rem(20);
+    font-weight: $bold;
+    line-height: 1;
     @include mq("md") {
         font-size: rem(24);
     }
@@ -120,8 +117,11 @@
 
 .campaign-category-card__price-after {
     margin-left: rem(20);
+    font-family: $font-lato;
     font-size: rem(32);
-    
+    font-weight: $bold;
+    line-height: 1;
+    color: $green;
 
     @include mq("md") {
         margin-left: clamp(0.1rem, 1.736vw, 1.5625rem);
@@ -129,36 +129,37 @@
     }
 }
 
-.campaign-category-card__explain-text {
-    flex-grow: 1;
-    margin-top: rem(8);
-    font-size: rem(14);
-    line-height: 1.5;
-
+.campaign-category-card__text{
     @include mq("md") {
+        flex-grow: 1;
         margin-top: rem(24);
         font-size: rem(16);
+        font-weight: $regular;
+        line-height: calc(24/16);
     }
 }
 
 .campaign-category-card__period {
-    margin-top: rem(16);
-    text-align: center;
-    font-size: rem(14);
-    font-weight: $bold;
-    line-height: 1.125;
     @include mq("md") {
         margin-top: rem(32);
+        text-align: center;
+        color: $green;
+        font-family: $font-lato;
         font-size: rem(16);
+        font-weight: $bold;
+        line-height: calc(18/16);
     }
 }
 
-.campaign-category-card__contact-text {
-    margin-top: rem(7);
-    text-align: center;
-    font-size: rem(12);
-    line-height: 1.125;
-    
+.campaign-category-card__inquiry{
+    @include mq(md){
+        margin-top: rem(7);
+        color: $green;
+        text-align: center;
+        font-size: rem(12);
+        font-weight: $regular;
+        line-height: calc(18/14);
+    }
 }
 
 .campaign-category-card__button {

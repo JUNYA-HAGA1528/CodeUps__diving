@@ -26,7 +26,11 @@
 }
 
 .campaign-cards__item{
-	width: rem(330);
+	width: rem(280);
+	@include mq(md){
+		width: rem(330);
+	}
+	
 }
 
 .campaign__button{

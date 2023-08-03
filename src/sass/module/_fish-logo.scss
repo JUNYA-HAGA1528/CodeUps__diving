@@ -1,0 +1,34 @@
+@use "global" as *;
+
+.fish-logo{
+	position: relative;
+}
+
+.fish-logo::before {
+    background-image: url(../images/common/share_fish.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    content: "";
+    top: rem(-25);
+    left: calc(50% - min(45%, rem(623)));
+    width: rem(122);
+    /* height指定しないと表示されないので、ここは指定する */
+    height: rem(55);
+    z-index: -100;
+    @include mq(md){
+        background-image: url(../images/common/share_fish.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+        content: "";
+        top: rem(-70);
+        left: calc(50% - min(48%, rem(623)));
+        width: rem(301);
+        /* height指定しないと表示されないので、ここは指定する */
+        height: rem(138);
+        z-index: -100;
+    }
+}

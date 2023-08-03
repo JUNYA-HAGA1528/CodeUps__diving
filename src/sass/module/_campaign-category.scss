@@ -28,10 +28,13 @@
     color: $white;
 }
 
-.campaign-category__body {
-    margin-top: rem(40);
-    padding: 0 rem(32);
+.campaign-category__container{
+    max-width: $max-width;
+    width: 100%;
+    margin: rem(40) auto 0;
+    padding: 0 rem(32.5);
     @include mq("md") {
+        max-width: 100%;
         padding: 0;
     }
 }
@@ -55,4 +58,8 @@
     @include mq("md") {
         margin-top: 0;
     }
+}
+
+.campaign-category__pagination{
+    margin-top: rem(80);
 }

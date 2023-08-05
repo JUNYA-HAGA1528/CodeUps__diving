@@ -127,4 +127,22 @@ jQuery(function ($) {
     });
 
 
+    //モーダル
+  $(function () {
+    $('.js-modal-open').click(function () {
+      var imgSrc = $(this).children().attr('src');
+      $('.js-large-img').children().attr('src', imgSrc);
+      $('.modal, .modal__bg, .js-large-img').fadeIn();
+      $('body,html').css('overflow-y', 'hidden');
+      return false
+    });
+
+    $('.js-modal-close').click(function () {
+      $('.modal, .modal__bg, .js-large-img').fadeOut();
+      $('body,html').css('overflow-y', 'visible');
+      return false
+    });
+  });
+
+
   });  

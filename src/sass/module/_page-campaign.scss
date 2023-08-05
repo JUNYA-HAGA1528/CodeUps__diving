@@ -1,6 +1,6 @@
 @use "global" as *;
 
-.campaign-category__tabs {
+.page-campaign__tabs {
     display: flex;
     flex-wrap: wrap;
     gap: rem(16.5) rem(21);
@@ -9,7 +9,7 @@
     }
 }
 
-.campaign-category__tab {
+.page-campaign__tab {
     width: rem(162);
     padding: rem(5.2) 0;
     text-align: center;
@@ -23,12 +23,12 @@
     cursor: pointer;
 }
 
-.campaign-category__tab.current {
+.page-campaign__tab.current {
     background-color: $green;
     color: $white;
 }
 
-.campaign-category__container{
+.page-campaign__container{
     max-width: $max-width;
     width: 100%;
     margin: rem(40) auto 0;
@@ -39,12 +39,12 @@
     }
 }
 
-.campaign-category__wrapper {
+.page-campaign__wrapper {
     display: none;
     width: 100%;
 }
 
-.campaign-category__items {
+.page-campaign__items {
     @include mq("md") {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -52,7 +52,7 @@
     }
 }
 
-.campaign-category__item + .campaign-category__item {
+.page-campaign__item + .page-campaign__item {
     margin-top: rem(40);
 
     @include mq("md") {
@@ -60,6 +60,6 @@
     }
 }
 
-.campaign-category__pagination{
+.page-campaign__pagination{
     margin-top: rem(80);
 }

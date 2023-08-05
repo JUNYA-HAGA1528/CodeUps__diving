@@ -5,6 +5,13 @@
     text-align: center;
 }
 
+.contact.contact--layout-about{
+    margin-top: rem(107);
+    @include mq(md){
+        margin-top: rem(128);
+    }
+}
+
 .contact::before {
     background-image: url(../images/common/contact_fish.png);
     background-position: center;
@@ -153,3 +160,4 @@
     margin-top: rem(40);
     text-align: center;
 }
+

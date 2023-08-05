@@ -2,82 +2,82 @@ jQuery(function ($) {
 
     //ハンバーガーメニュー
     $('.js-hamburger').on('click', function () {
-      if ($('.js-hamburger').hasClass('is-open')) {
-        $('.js-drawer-menu').removeClass("is-open");
-        $(this).removeClass('is-open');
-      } else {
-        $('.js-drawer-menu').addClass("is-open");
-        $(this).addClass('is-open');
-      }
+        if ($('.js-hamburger').hasClass('is-open')) {
+            $('.js-drawer-menu').removeClass("is-open");
+            $(this).removeClass('is-open');
+        } else {
+            $('.js-drawer-menu').addClass("is-open");
+            $(this).addClass('is-open');
+        }
     });
   
 
     //mv swiper
     var swiper = new Swiper(".js-fv-swiper", {
-      loop: true,
-      effect: "fade",
-      speed: 3000,
-      allowTouchMove: false,
-      autoplay: {
-      delay: 5000,
-      },
+        loop: true,
+        effect: "fade",
+        speed: 3000,
+        allowTouchMove: false,
+        autoplay: {
+        delay: 5000,
+        },
     });
   
   
     //Campaign swiper
     var swiper = new Swiper(".js-campaign-swiper", {
       
-      slidesPerView: "auto", //スライド枚数 1.26枚
-  
-      //〇〇以上の画面幅で〇〇枚のスライドと幅が〇〇pxと設定する
-      breakpoints: { 
-        768: {
-          spaceBetween: 40,
+        slidesPerView: "auto", //スライド枚数 1.26枚
+    
+        //〇〇以上の画面幅で〇〇枚のスライドと幅が〇〇pxと設定する
+        breakpoints: { 
+            768: {
+                spaceBetween: 40,
+            },
         },
-      },
   
-      spaceBetween: 24, 
-      speed: 1000, 
-      loop: true, 
-      autoplay: {
-        delay: 5000, 
-        disableOnInteraction: false 
-      },
-      // ボタンを押した際の、スライド
-      navigation: {
-        nextEl: ".js-campaign-button-next",
-        prevEl: ".js-campaign-button-prev"
-      }
+        spaceBetween: 24, 
+        speed: 1000, 
+        loop: true, 
+        autoplay: {
+            delay: 5000, 
+            disableOnInteraction: false 
+        },
+        // ボタンを押した際の、スライド
+        navigation: {
+            nextEl: ".js-campaign-button-next",
+            prevEl: ".js-campaign-button-prev"
+        }
     });
   
   
     //スクロールトップ
     $(function () {
       // スクロールしたら「トップに戻る」ボタンが表示される
-      const toTopButton = $(".js-scroll-top");
-      const scrollHeight = 100;
-      toTopButton.hide();
-      $(window).scroll(function () {
-        if ($(this).scrollTop() > 100) {
-          toTopButton.fadeIn();
-        } else {
-          toTopButton.fadeOut();
-        }
-    
-        // ページの一番下でトップに戻るボタンが消える
-        const doch = $(document).innerHeight();
-        const winh = $(window).innerHeight();
-        const bottom = doch - winh;
-        if (bottom <= $(window).scrollTop()) {
-          toTopButton.fadeOut();
-        }
-      });
-    
-      // 「トップに戻る」ボタンをクリックしたらスクロールで戻る
-      toTopButton.click(function () {
-        $("body,html").animate({ scrollTop: 0 }, 800);
-        return false;
-      });
+        const toTopButton = $(".js-scroll-top");
+        const scrollHeight = 100;
+        toTopButton.hide();
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 100) {
+                toTopButton.fadeIn();
+            } else {
+                toTopButton.fadeOut();
+            }
+        
+            // ページの一番下でトップに戻るボタンが消える
+            const doch = $(document).innerHeight();
+            const winh = $(window).innerHeight();
+            const bottom = doch - winh;
+            if (bottom <= $(window).scrollTop()) {
+                toTopButton.fadeOut();
+            }
+        });
+        
+        // 「トップに戻る」ボタンをクリックしたらスクロールで戻る
+        toTopButton.click(function () {
+            $("body,html").animate({ scrollTop: 0 }, 800);
+            return false;
+        });
     });
   
   
@@ -97,52 +97,52 @@ jQuery(function ($) {
     //inviewを使って背景色が画面に現れたら処理をする
     color.on('inview', function(){
         if(counter == 0){
-          $(this).delay(200).animate({'width':'100%'},speed,function(){
-              image.css('opacity','1');
-              $(this).css({'left':'0' , 'right':'auto'});
-              $(this).animate({'width':'0%'},speed);
-          })
-            counter = 1;
-          }
-      });
+            $(this).delay(200).animate({'width':'100%'},speed,function(){
+                image.css('opacity','1');
+                $(this).css({'left':'0' , 'right':'auto'});
+                $(this).animate({'width':'0%'},speed);
+            })
+                counter = 1;
+            }
+        });
     });
 
 
     //====================下層ページ====================
-    //campaignのタブ
+    //campaign タブ
     $(function () {
-      // 最初のコンテンツは表示
-      $(".js-campaign-wrapper:first-of-type").css("display", "block");
-      // タブをクリックすると
-      $(".js-campaign-tab").on("click", function () {
-        // 現在選択されているタブからcurrentを外す
-        $(".current").removeClass("current");
-        // クリックされたタブにcurrentクラスを付与
-        $(this).addClass("current");
-        // クリックされた要素が何番目か取得（クリックしたタブのインデックス番号を取得）
-        const index = $(this).index();
-        // クリックしたタブのインデックス番号と同じコンテンツを表示
-        $(".js-campaign-wrapper").hide().eq(index).fadeIn(300);
-      });
+        // 最初のコンテンツは表示
+        $(".js-campaign-wrapper:first-of-type").css("display", "block");
+        // タブをクリックすると
+        $(".js-campaign-tab").on("click", function () {
+            // 現在選択されているタブからcurrentを外す
+            $(".current").removeClass("current");
+            // クリックされたタブにcurrentクラスを付与
+            $(this).addClass("current");
+            // クリックされた要素が何番目か取得（クリックしたタブのインデックス番号を取得）
+            const index = $(this).index();
+            // クリックしたタブのインデックス番号と同じコンテンツを表示
+            $(".js-campaign-wrapper").hide().eq(index).fadeIn(300);
+        });
     });
 
 
-    //モーダル
-  $(function () {
-    $('.js-modal-open').click(function () {
-      var imgSrc = $(this).children().attr('src');
-      $('.js-large-img').children().attr('src', imgSrc);
-      $('.modal, .modal__bg, .js-large-img').fadeIn();
-      $('body,html').css('overflow-y', 'hidden');
-      return false
+
+    //about モーダル   
+    let scrollPos;
+    $(".js-photo").click(function () {
+        scrollPos = $(window).scrollTop();
+        $(".js-overlay").html($(this).prop("outerHTML"));
+        $(".js-overlay").fadeIn(200);
+        $(".js-header, .js-page-top").hide();
+        $('html').addClass('is-fixed');
+        return false,
+        $(".js-overlay").click(function () {
+            $(".js-overlay").fadeOut(200, function () {
+                $(".js-header, .js-page-top").fadeIn();
+                $('html').removeClass('is-fixed');
+            });
+            return false;
+        });
     });
-
-    $('.js-modal-close').click(function () {
-      $('.modal, .modal__bg, .js-large-img').fadeOut();
-      $('body,html').css('overflow-y', 'visible');
-      return false
-    });
-  });
-
-
-  });  
+});  

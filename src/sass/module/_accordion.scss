@@ -1,0 +1,77 @@
+@use "global" as *;
+
+.accordion__title {
+    position: relative;
+    font-size: rem(16);
+    padding: rem(19.5) rem(16);
+    font-weight: $regular;
+    line-height: 1;
+    color: #fff;
+    background-color: $green;
+    cursor: pointer;
+    @include mq(md){
+        padding: rem(30) rem(40);
+        font-size: rem(20);
+    }
+}
+
+.accordion__content{
+    border: solid 1px $green ;
+    @include mq(md){
+        margin-top: rem(27);
+    }
+}
+
+.accordion__text{
+    padding: rem(24) rem(16);
+    font-size: rem(16);
+    font-weight: $regular;
+    line-height: 1.42;
+    @include mq(md){
+        padding: rem(40);
+    }
+}
+
+.accordion__title::before {
+    content: '';
+    position: absolute;
+    top: 49%;
+    right: rem(13);
+    width: rem(32);
+    height: rem(1);
+    display: inline-block;
+    background-color: #fff;
+    transform: translateY(-50%);
+    transition: opacity 0.3s;
+    @include mq(md){
+        right: rem(40);
+    }
+}
+
+.accordion__title::after {
+    content: '';
+    position: absolute;
+    top: 49%;
+    right: rem(13);
+    width: rem(32);
+    height: rem(1);
+    display: inline-block;
+    background-color: #fff;
+    transform: translateY(-50%) rotate(90deg);
+    transition: transform 0.5s;
+    @include mq(md){
+        right: rem(40);
+    }
+}
+
+.accordion__title.show::before {
+    opacity: 0;
+}
+
+.accordion__title.show::after {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.accordion__content {
+    display: none;
+}

@@ -130,19 +130,29 @@ jQuery(function ($) {
 
     //about モーダル   
     let scrollPos;
-    $(".js-photo").click(function () {
+    $(".js-gallery-photo").click(function () {
         scrollPos = $(window).scrollTop();
-        $(".js-overlay").html($(this).prop("outerHTML"));
-        $(".js-overlay").fadeIn(200);
+        $(".js-gallery-overlay").html($(this).prop("outerHTML"));
+        $(".js-gallery-overlay").fadeIn(200);
         $(".js-header, .js-page-top").hide();
         $('html').addClass('is-fixed');
         return false,
-        $(".js-overlay").click(function () {
-            $(".js-overlay").fadeOut(200, function () {
+        $(".js-gallery-overlay").click(function () {
+            $(".js-gallery-overlay").fadeOut(200, function () {
                 $(".js-header, .js-page-top").fadeIn();
                 $('html').removeClass('is-fixed');
             });
             return false;
+        });
+    });
+
+
+    $(function () {
+        $(".accordion:first-of-type .accordion__content").css("display", "block");
+        $(".accordion:first-of-type .accordion__title").addClass("show");
+        $(".accordion__title").on("click", function () {
+            $(this).next().slideToggle();
+            $(this).toggleClass("show");
         });
     });
 });  

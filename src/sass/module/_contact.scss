@@ -5,11 +5,19 @@
     text-align: center;
 }
 
-.contact.contact--layout-about{
+.contact--about{
     margin-top: rem(107);
     @include mq(md){
         margin-top: rem(128);
     }
+}
+
+.contact--faq{
+    margin-top: rem(108);
+    @include mq(md){
+        margin-top: rem(86);
+    }
+    
 }
 
 .contact::before {

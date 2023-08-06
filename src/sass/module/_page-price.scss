@@ -1,0 +1,32 @@
+@use "global" as *;
+
+.page-price{
+
+}
+
+.page-price__inner{
+    max-width: $max-width;
+}
+
+.page-price__items{
+    margin-top: rem(52);
+    display: grid;
+    gap: rem(40);
+    @include mq('md') {
+        margin-top: rem(148);
+        gap: rem(74);
+    }
+  }
+  
+  .page-price__list{
+        max-width: rem(520);
+        width: 100%;
+        margin: auto;
+        @include mq('md') {
+            max-width: initial;
+            margin: initial;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+  }

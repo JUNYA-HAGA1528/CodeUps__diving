@@ -1,0 +1,86 @@
+@use "global" as *;
+
+.price-list__head {
+    padding: rem(8) 0;
+    background-color: $green;
+    text-align: center;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    @include mq('md') {
+        flex-direction: column;
+        width: rem(200);
+        height: 100%;
+    }
+}
+
+.price-list__title {
+    font-size: rem(16);
+    font-weight: $bold;
+    line-height: calc(24/16);
+    color: $white;
+    margin-left: rem(8);
+    @include mq('md') {
+        margin-left: 0;
+    }
+}
+
+.price-list__img {
+    display: inline-block;
+    width: rem(24);
+    height: rem(24);
+    @include mq('md') {
+        width: rem(64);
+        height: rem(64);
+        margin-top: rem(8);
+    }
+}
+
+
+.price-list__item{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid $green;
+    border-left: 1px solid $green;
+    border-right: 1px solid $green;
+    position: relative;
+    @include mq('md') {
+    }
+}
+
+.price-list__item:first-child {
+    @include mq('md') {
+        border-top: 1px solid $green;
+    }
+}
+
+.price-list__item dt {
+    width: 69.5%;
+    text-align: center;
+    padding: rem(7) rem(16);
+    border-right: rem(1) solid $green;
+    @include mq('md') {
+        width: rem(340);
+        text-align: left;
+        padding: rem(18) rem(16);
+    }
+}
+
+
+.price-list__item--padding dt {
+    padding: rem(19) rem(16);
+    @include mq('md') {
+        padding: rem(18) rem(16);
+    }
+}
+
+.price-list__item dd {
+  width: 30.5%;
+  padding: rem(19) rem(16);
+  text-align: right;
+    @include mq('md') {
+        width: rem(160);
+        padding: rem(18) rem(16);
+    }
+}

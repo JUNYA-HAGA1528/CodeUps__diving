@@ -1,0 +1,36 @@
+@use "global" as *;
+
+.footer-nav__item--black a{
+    color: #0D2936;
+    display: block;
+}
+
+.site-map__inner{
+    max-width: $max-width;
+    width: 100%;
+    margin: auto;
+}
+
+
+.footer-nav__item-title--logo{
+    position: relative;
+    padding-top: rem(10);
+    padding-bottom: rem(10);
+    padding-left: rem(21);
+    @include mq(md){
+        padding-top: rem(10);
+        padding-bottom: rem(8);
+    }
+}
+
+.footer-nav__item-title--logo a::before {
+    background-image: url(../images/common/site-logo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    content: "";
+    left: 0;
+    width: rem(18);
+    height: rem(18);
+}

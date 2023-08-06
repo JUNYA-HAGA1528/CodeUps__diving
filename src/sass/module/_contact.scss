@@ -13,11 +13,17 @@
 }
 
 .contact--faq{
-    margin-top: rem(108);
+    margin-top: rem(118);
     @include mq(md){
         margin-top: rem(86);
     }
-    
+}
+
+.contact--site-map{
+    margin-top: rem(108);
+    @include mq(md){
+        margin-top: rem(132);
+    }
 }
 
 .contact::before {

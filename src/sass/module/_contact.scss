@@ -19,6 +19,13 @@
     }
 }
 
+.contact--information{
+    margin-top: rem(105);
+    @include mq(md){
+        margin-top: rem(137);
+    }
+}
+
 .contact--site-map{
     margin-top: rem(108);
     @include mq(md){

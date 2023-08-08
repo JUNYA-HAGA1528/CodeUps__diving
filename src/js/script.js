@@ -147,12 +147,31 @@ jQuery(function ($) {
     });
 
 
+    //accordion
     $(function () {
         $(".accordion:first-of-type .accordion__content").css("display", "block");
         $(".accordion:first-of-type .accordion__title").addClass("show");
         $(".accordion__title").on("click", function () {
             $(this).next().slideToggle();
             $(this).toggleClass("show");
+        });
+    });
+
+
+    //information タブ
+    $(function () {
+        // 最初のコンテンツは表示
+        $(".js-information-wrapper:first-of-type").css("display", "block");
+        // タブをクリックすると
+        $(".js-information-tab").on("click", function () {
+          // 現在選択されているタブからcurrentを外す
+          $(".current").removeClass("current");
+          // クリックされたタブにcurrentクラスを付与
+          $(this).addClass("current");
+          // クリックされた要素が何番目か取得（クリックしたタブのインデックス番号を取得）
+          const index = $(this).index();
+          // クリックしたタブのインデックス番号と同じコンテンツを表示
+          $(".js-information-wrapper").hide().eq(index).fadeIn(300);
         });
     });
 });  

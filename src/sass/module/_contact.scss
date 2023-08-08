@@ -40,6 +40,13 @@
     }
 }
 
+.contact--privacy{
+    margin-top: rem(107);
+    @include mq(md){
+        margin-top: rem(137);
+    }
+}
+
 .contact::before {
     background-image: url(../images/common/contact_fish.png);
     background-position: center;

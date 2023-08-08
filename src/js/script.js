@@ -174,4 +174,22 @@ jQuery(function ($) {
           $(".js-information-wrapper").hide().eq(index).fadeIn(300);
         });
     });
+
+
+    //voice タブ
+    $(function () {
+        // 最初のコンテンツは表示
+        $(".js-voice-wrapper:first-of-type").css("display", "block");
+        // タブをクリックすると
+        $(".js-voice-tab").on("click", function () {
+            // 現在選択されているタブからcurrentを外す
+            $(".current").removeClass("current");
+            // クリックされたタブにcurrentクラスを付与
+            $(this).addClass("current");
+            // クリックされた要素が何番目か取得（クリックしたタブのインデックス番号を取得）
+            const index = $(this).index();
+            // クリックしたタブのインデックス番号と同じコンテンツを表示
+            $(".js-voice-wrapper").hide().eq(index).fadeIn(300);
+        });
+    });
 });  

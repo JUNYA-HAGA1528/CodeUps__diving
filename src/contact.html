@@ -150,6 +150,21 @@
                                 </div>
                             </li>
                         </ul>
+                        <ul class="sp-nav__items">
+                            <li class="sp-nav__item">
+                                <div class="sp-nav__item-title">
+                                    <a href="contact-thanks.html">thanks</a>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="sp-nav__items">
+                            <li class="sp-nav__item">
+                                <div class="sp-nav__item-title">
+                                    <a href="contact-error.html">404</a>
+                                </div>
+                            </li>
+                        </ul>
+                        
                     </div>
                 </div>
             </nav>
@@ -230,7 +245,7 @@
 
 
     <!-- sub-fv -->
-    <section class="form-fv sub-fv">
+    <section class="contact-fv sub-fv">
         <div class="sub-fv__inner">
             <picture>
                 <source srcset="./assets/images/common/privacy-policy_fv_pc.jpg" media="(min-width: 768px)">
@@ -271,118 +286,112 @@
     
     
     <main>
-
     <section class="top-contact-form contact-form fish-logo">
         <div class="contact-form__inner inner">
             
             <ul class="contact-form__items">
-                <li class="contact-form__item">
-                    <p class="contact-form__label">
-                        お名前<span class="contact-form__label-lequired">必須</span>
-                    </p>
-                    <input type="text" class="contact-form__input" placeholder="沖縄　太郎">
-                </li>
-                <li class="contact-form__item">
-                    <p class="contact-form__label">メールアドレス
-                        <span class="contact-form__label-lequired">必須</span>
-                    </p>
-                    <input type="email" class="contact-form__input" placeholder="aaa000@ggmail.com">
-                </li>
-                <li class="contact-form__item">
-                    <p class="contact-form__label">
-                        電話番号<span class="contact-form__label-lequired">必須</span>
-                    </p>
-                    <input type="text" class="contact-form__input" placeholder="000-0000-0000">
-                </li>
+                <!-- 個人情報 -->
+                <dl class="contact-form__item">
+                    <dt>
+                        <h2 class="contact-form__label">
+                            お名前<span class="contact-form__label-lequired">必須</span>
+                        </h2>
+                    </dt>
+                    <dd>
+                        <input type="text" class="contact-form__input" required placeholder="沖縄　太郎">
+                    </dd>
+                </dl>
+                <dl class="contact-form__item">
+                    <dt>
+                        <h2 class="contact-form__label">メールアドレス
+                            <span class="contact-form__label-lequired">必須</span>
+                        </h2>
+                    </dt>
+                    <dd>
+                        <input type="email" class="contact-form__input" required placeholder="aaa000@ggmail.com">
+                    </dd>
+                </dl>
+                <dl class="contact-form__item">
+                    <dt>
+                        <h2 class="contact-form__label">
+                            電話番号<span class="contact-form__label-lequired">必須</span>
+                        </h2>
+                    </dt>
+                    <dd>
+                        <input type="text" class="contact-form__input" required placeholder="000-0000-0000">
+                    </dd>
+                </dl>
 
+                <!-- チェックボックス -->
+                <dl class="contact-form__item contact-form__item--block">
+                    <dt>
+                        <h2 class="contact-form__label contact-form__content--checkbox">
+                            お問合せ項目<span class="contact-form__label-lequired">必須</span>
+                        </h2>
+                    </dt>
+                    <dd class="contact-form__content">
+                        <label class="contact-form__checkbox" required>
+                            <input name="checkbox" class="contact-form__checkbox-input" type="checkbox">
+                            <span class="contact-form__checkbox-text">ダイビング講習について</span>
+                        </label>
+                        <label class="contact-form__checkbox" required>
+                            <input name="checkbox" class="contact-form__checkbox-input" type="checkbox">
+                            <span class="contact-form__checkbox-text">ファンデイビングについて</span>
+                        </label>
+                        <label class="contact-form__checkbox" required>
+                            <input name="checkbox" class="contact-form__checkbox-input" type="checkbox">
+                            <span class="contact-form__checkbox-text">体験ダイビングについて</span>
+                        </label>
+                    </dd>
+                </dl>
 
+                <!-- プルダウン -->
+                <dl class="contact-form__item">
+                    <dt>
+                        <h2 class="contact-form__label">キャンペーン</h2>
+                    </dt>
+                    <dd>
+                        <select id="job" name="job" class="contact-form__select">
+                            <option value="">キャンペーン内容を選択</option>
+                            <option value="Google/Yahoo検索">ライセンス取得</option>
+                            <option value="SNS">体験ダイビング</option>
+                            <option value="ブログ">ブログ</option>
+                            <option value="友人や知人">ナイトダイビング</option>
+                            <option value="その他">貸切ファンダイビング</option>
+                        </select>
+                    </dd>
+                </dl>
 
-
-                <li class="contact-form__item">
-                    <p class="contact-form__label">
-                        お問合せ項目<span class="contact-form__label-lequired">必須</span>
-                    </p>
-                    <input type="checkbox" checked="checked" />
-                </li>
-
-
-
-
-                <li class="contact-form__item">
-                    <p class="contact-form__label">キャンペーン</p>
-                    
-                </li>
-
-
-
-
-
-
-
-
-
-
-
-
-                <li class="contact-form__item">
-                    <p class="contact-form__label isMsg">
-                        お問い合わせ内容<span class="contact-form__label-lequired">必須</span>
-                    </p>
-                    <textarea class="contact-form__textarea"></textarea>
-                </li>    
+                <!-- お問い合わせ -->
+                <dl class="contact-form__item">
+                    <dt>
+                        <h2 class="contact-form__label contact-form__content--faq">
+                            お問合せ内容<span class="contact-form__label-lequired">必須</span>
+                        </h2>
+                    </dt>
+                    <dd>
+                        <textarea class="contact-form__textarea"></textarea>
+                    </dd>
+                </dl>
+                
+                <!-- チェックボックス -->
+                <label class="contact-form__agreement">
+                    <input name="checkbox" class="contact-form__agreement-input" type="checkbox">
+                    <span class="contact-form__agreement-text">個人情報の取り扱いについて同意のうえ
+                        送信します。</span>
+                </label>
             </ul>
 
-
-
+            <!-- 送信ボタン --> 
             <div class="contact-form__button">
                 <a href="#" class="button"><span>send</span></a>
             </div>
         </div>
     </section>
-
-
-
-
-
-
-    
-
-    <!-- contact -->
-    <section class="contact contact--privacy ">
-        <div class="contact__inner inner">
-            <div class="contact__wrapper">
-                <div class="contact__information">
-                    <div class="contact__information-img">
-                        <img src="./assets/images/common/contact1.png" alt="contactのロゴ">
-                    </div>
-                    <div class="contact__information-contents">
-                        <div class="contact__information-text">
-                            <p>沖縄県那覇市1-1</p>
-                            <p>TEL:0120-000-0000</p>
-                            <p>営業時間:8:30-19:00</p>
-                            <p>定休日:毎週火曜日</p>
-                        </div>
-                        <div class="contact__information-map">
-                            <a href="" class="contact__information-link">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57273.023195625865!2d127.64350223135104!3d26.21085943026135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e5697141a6b58b%3A0x2cd8aff616585e98!2z5rKW57iE55yM6YKj6KaH5biC!5e0!3m2!1sja!2sjp!4v1689021270477!5m2!1sja!2sjp" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="contact__inquiry">
-                    <div class="contact__inquiry-title">
-                        <h2 class="contact__inquiry-title__en">contact</h2>
-                        <p class="contact__inquiry-title__jp">お問い合わせ</p>
-                        <p class="contact__inquiry-title__guide">ご予約・お問い合わせはコチラ</p>
-                    </div>
-                    <div class="contact__button">
-                        <a href="contact.html" class="button"><span>View&nbsp;more</span></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 </main>
+
+
+
 
     <!-- footer -->
     <footer class="top-footer footer">

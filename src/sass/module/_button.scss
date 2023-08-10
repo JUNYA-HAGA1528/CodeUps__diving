@@ -88,3 +88,91 @@ a:hover {
         opacity: 0.5;
     }
 }
+
+
+
+
+
+
+.contact-error__button-white{
+    position: relative;
+	background-color: $white;
+	border: rem(1) solid $white;
+	color: $green;
+	display: inline-block;
+    padding: rem(15) 0;
+    width: rem(202);
+	font-family: $font-gotu;
+	font-size: rem(14);
+	font-weight: normal;
+	line-height: calc(22/14);
+	text-align: center;
+	transition: color 0.2s;
+	z-index: 1;
+    cursor: pointer;
+}
+
+.contact-error__button-white:hover {
+    @include mq(md){
+        color: $white;
+        opacity: 1;
+    }
+}
+
+.contact-error__button-white:hover::after {
+    @include mq(md){
+        transform: scale(1, 1);
+    }
+}
+
+.contact-error__button-white::before {
+	border: rem(1) solid $white;
+    content: "";
+    position: absolute;
+    top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	transform: translate(rem(4), rem(4));
+	z-index: -2;
+}
+
+.contact-error__button-white::after {
+	background-color: $green;
+	content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+	height: 100%;
+	transform: scale(0, 1);
+	transform-origin: left top;
+	transition: 0.5s cubic-bezier(0.45, 0, 0.55, 1);
+	width: 100%;
+	z-index: -1;
+}
+
+.contact-error__button-white span {
+	padding-right: rem(60);
+	position: relative;
+}
+
+.contact-error__button-white span::after {
+	background-image: url(../images/common/button_arrow_green.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	content: "";
+    position: absolute;
+    top: 40.74%;
+    right: 0;
+    width: rem(60);
+	height: rem(7);
+	transform: translateY(-50%);
+	transition: 0.2s background-color;
+}
+
+.contact-error__button-white:hover span::after {
+    @include mq(md){
+        background-image: url(../images/common/button_arrow_white.png);
+    }
+}

@@ -1,0 +1,49 @@
+@use "global" as *;
+
+.contact-error{
+    background-color: #408F95;
+    color: $white;
+    text-align: center;
+    padding: rem(40) 0;
+    background-image: url(../images/common/error_bgi.png);
+    background-position:  center rem(-30);
+    background-repeat: no-repeat;
+    background-size: rem(345);
+    border-top: solid 1px $green ;
+    border-bottom: solid 1px $green ;
+    @include mq(md){
+        background-size: rem(690);
+        padding: rem(40) 0 rem(120);
+        background-position:  rem(185) rem(-25);
+    }
+}
+
+.contact-error_title{
+    font-family:$font-lato ;
+    font-size: rem(80);
+    font-weight: $regular;
+    letter-spacing: 0.5em;
+    text-indent:0.5em;
+    @include mq(md){
+        margin-top: rem(51);
+        font-size: rem(160);
+    }
+}
+
+.contact-error_text{
+    font-family:$font-lato ;
+    font-size: rem(16);
+    font-weight: $regular;
+    line-height: calc(24/16);
+    margin-top: rem(-17.6);
+    @include mq(md){
+        margin-top: 0;
+    }
+}
+
+.contact-error__button{
+    margin-top: rem(40);
+    @include mq(md){
+        margin-top: rem(80);
+    }
+}

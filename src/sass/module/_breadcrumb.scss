@@ -32,9 +32,32 @@
     content: "";/*最終位置の矢印を無くす*/
   }
 
+  .breadcrumb__item--white::after {
+    padding: 0 rem(1.6) 0 rem(3.2);/*矢印の幅*/
+    content: ">";
+    color: $white;
+  }
+  
+  .breadcrumb__item--white:last-child:after {
+    content: "";/*最終位置の矢印を無くす*/
+  }
+
   .breadcrumb__link{
     font-size: rem(14);
     font-weight: $regular;
     text-transform: uppercase;
     color: #0D2936;
   }
+
+.breadcrumb--padding{
+  padding-top: rem(84.8);
+  background-color: $green;
+  border-bottom: solid 1px $green ;
+  @include mq(md){
+    padding-top: rem(96);
+  }
+}
+
+.breadcrumb__link--white{
+  color: $white;
+}

@@ -46,7 +46,6 @@
 }
 
 .page-information__tab span::before {
-
     @include mq("md") {
         position: absolute;
         content: "";

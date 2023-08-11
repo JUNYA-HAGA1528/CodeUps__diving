@@ -1,2 +1,47 @@
 @use "global" as *;
 
+.sideBar__heading{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.sideBar__heading-img{
+    margin-left: rem(24);
+}
+
+.sideBar__heading::before{
+    position: absolute;
+    content: "";
+    display: block;
+    top: 0;
+    left: 0;
+    width: rem(8);
+    height: rem(50);
+    background-color: $green;
+}
+
+.sideBar__heading-img img{
+    width: rem(50);
+    height: rem(50);
+}
+
+.sideBar__heading-title{
+    margin-left: rem(8);
+    font-size: rem(24);
+    font-weight: $regular;
+    line-height: 1;
+}
+
+.sideBar__items{
+    margin-top: rem(24);
+}
+
+.sideBar__button{
+    text-align: center;
+    margin-top: rem(40);
+}
+
+.sideBar__item + .sideBar__item {
+    margin-top: rem(40);
+}

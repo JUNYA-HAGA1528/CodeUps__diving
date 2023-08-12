@@ -1,6 +1,5 @@
 @use "global" as *;
 
-
 .contact-form__items{
     max-width: $max-width;
     width: 100%;
@@ -62,6 +61,7 @@
 
 .contact-form__input{
     margin-top: rem(16);
+    padding: 0 rem(15);
     height: 40px;
     flex: 1;
     font-size: 15px;
@@ -233,3 +233,45 @@
         padding-bottom: rem(6.4);
     }
 }
+
+
+
+
+
+
+/*---request---*/
+// .contact-form__request{
+//     max-width: rem(245);
+//     width: 100%;
+//     margin: auto;
+//     padding-left: 1.5em;
+//     text-indent: -0.9em;
+// }
+
+// .contact-form__request p {
+//     color: #C94800;
+//     font-size: rem(14);
+//     font-weight: $regular;
+// }
+
+// .contact-form__items--request{
+//     margin-top: rem(40);
+// }
+
+// .contact-form__input--request{
+//     margin-top: rem(16);
+//     height: 40px;
+//     flex: 1;
+//     font-size: 15px;
+//     border: rem(1) solid #C94800;
+//     width: 100%;
+//     background-color: rgba(201, 72, 0, 0.2);
+//     @include mq(md){
+//         flex: inherit;
+//         margin-top: 0;
+//         padding-left: 1em;
+//         padding-right: 1em;
+//         height: 48px;
+//         font-size: 18px;
+//     }
+// }

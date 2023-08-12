@@ -257,7 +257,7 @@
                 <!-- 2つめ -->
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="breadcrumb__item">
                     <span itemprop="item" href="price.html" class="breadcrumb__link">
-                        <span itemprop="name">ブログ一覧</span>
+                        <span itemprop="name">ブログ詳細</span>
                     </span>
                     <meta itemprop="position" content="2" />
                 </li>
@@ -268,68 +268,72 @@
     
     
     <main>
-    <section class="layout-blog page-blog fish-logo">
-        <div class="page-blog__inner inner">
-            <div class="page-blog__wrapper">
+    <section class="layout-sub-blog sub-blog fish-logo">
+        <div class="sub-blog__inner inner">
+            <div class="sub-blog__wrapper">
 
                 <!--main-->
-                <div class="page-blog__main">
-                    <ul class="page-blog__list page-blog-cards">
-                        <li class="page-blog-cards__item page-blog-card">
-                            <a href="" class="page-blog-card__link">
-                                <div class="page-blog-card__img">
-                                    <img src="./assets/images/common/blog_card_1.jpg" alt="海中にある珊瑚">
-                                </div>
-                                <div class="page-blog-card__content">
-                                    <time class="page-blog-card__data">2023.11/17</time>
-                                    <h2 class="page-blog-card__title">ライセンス取得</h2>
-                                    <p class="page-blog-card__text">
-                                        ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
-                                    </p>
-                                </div>
-                            </a>
+                <div class="sub-blog__main">
+                    <div class="sub-blog-card__heading">
+                        <time class="sub-blog-card__data">2023.11/17</time>
+                        <h2 class="sub-blog-card__title">ライセンス取得</h2>
+                    </div>
+                    <ul class="sub-blog__items sub-blog-cards">
+                        <li class="sub-blog-cards__item sub-blog-card">
+                            
+                            <div class="sub-blog-card__img">
+                                <img src="./assets/images/common/blog_card_1.jpg" alt="海中にある珊瑚">
+                            </div>
+                            <p class="sub-blog-card__text">
+                                ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+                            </p>
                         </li>
-                        <li class="page-blog-cards__item page-blog-card">
-                            <a href="" class="page-blog-card__link">
-                                <div class="page-blog-card__img">
-                                    <img src="./assets/images/common/blog_card_2.jpg" alt="ウミガメのアップ">
-                                </div>
-
-                                <div class="page-blog-card__content">
-                                    <time class="page-blog-card__data">2023.11/17</time>
-                                    <h2 class="page-blog-card__title">ウミガメと泳ぐ</h2>
-                                    <p class="page-blog-card__text">
-                                        ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
-                                    </p>
-                                </div>
-                            </a>
+                        <li class="sub-blog-cards__item sub-blog-card">
+                            <div class="sub-blog-card__img">
+                                <img src="./assets/images/common/blog_card_1.jpg" alt="海中にある珊瑚">
+                            </div>
+                            <p class="sub-blog-card__text">
+                                ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+                            </p>
                         </li>
-                        
                     </ul>
-                    <div class="page-blog__pagination pagination">
-                        <div class="pagination__button-prev"></div>
-            
-                        <ul class="pagination__pagination-items">
-                            <li class="pagination__pagination-item current">1</li>
-                            <li class="pagination__pagination-item">2</li>
-                            <li class="pagination__pagination-item">3</li>
-                            <li class="pagination__pagination-item">4</li>
-                            <li class="pagination__pagination-item u-desktop">5</li>
-                            <li class="pagination__pagination-item u-desktop">6</li>
-                        </ul>
-                        
-                        <div class="pagination__button-next"></div>
+                    <div class="sub-blog-cards__list">
+                        <div class="sub-blog-cards__flex">
+                            <div class="sub-blog-cards__flex-img">
+                                <img src="./assets/images/common/starfish_blog.jpg" alt="海中にある珊瑚">
+                            </div>
+                            <p class="sub-blog-cards__flex-text">リスト1</p>
+                        </div>
+                        <div class="sub-blog-cards__flex">
+                            <div class="sub-blog-cards__flex-img">
+                                <img src="./assets/images/common/starfish_blog.jpg" alt="海中にある珊瑚">
+                            </div>
+                            <p class="sub-blog-cards__flex-text">リスト2</p>
+                        </div>
+                        <div class="sub-blog-cards__flex">
+                            <div class="sub-blog-cards__flex-img">
+                                <img src="./assets/images/common/starfish_blog.jpg" alt="海中にある珊瑚">
+                            </div>
+                            <p class="sub-blog-cards__flex-text">リスト3</p>
+                        </div>
+                    </div>
+                    <p class="sub-blog-card__text">
+                        ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+                    </p>
+                    <div class="sub-blog__pagination pagination">
+                        <div class="pagination__button-prev"></div>            
+                        <div class="pagination__button-next pagination__button-next--margin"></div>
                     </div>
                 </div>
 
 
 
                 <!--side-->
-                <div class="page-blog__side">
-                    <div class="page-blog__side-inner">
+                <div class="sub-blog__side">
+                    <div class="sub-blog__side-inner">
 
                         <!--blog-->
-                        <div class="page-blog__side-content sideBar">
+                        <div class="sub-blog__side-content sideBar">
                             <div class="sideBar__heading">
                                 <div class="sideBar__heading-img">
                                     <img src="./assets/images/common/sideBar_title_logo.png" alt="クジラのロゴ">
@@ -379,7 +383,7 @@
 
 
                         <!--voice-->
-                        <div class="page-blog__side-content sideBar">
+                        <div class="sub-blog__side-content sideBar">
                             <div class="sideBar__heading">
                                 <div class="sideBar__heading-img">
                                     <img src="./assets/images/common/sideBar_title_logo.png" alt="クジラのロゴ">
@@ -409,7 +413,7 @@
 
 
                         <!--campaign-->
-                        <div class="page-blog__side-content sideBar">
+                        <div class="sub-blog__side-content sideBar">
                             <div class="sideBar__heading">
                                 <div class="sideBar__heading-img">
                                     <img src="./assets/images/common/sideBar_title_logo.png" alt="クジラのロゴ">
@@ -460,7 +464,7 @@
 
 
                         <!--archive-->
-                        <div class="page-blog__side-content sideBar">
+                        <div class="sub-blog__side-content sideBar">
                             <div class="sideBar__heading">
                                 <div class="sideBar__heading-img">
                                     <img src="./assets/images/common/sideBar_title_logo.png" alt="クジラのロゴ">

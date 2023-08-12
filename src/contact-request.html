@@ -274,18 +274,11 @@
     
                 <!-- 2つめ -->
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="breadcrumb__item">
-                    <span itemprop="item" href="contact.html" class="breadcrumb__link">
+                    <span itemprop="item" href="campaign.html" class="breadcrumb__link">
                         <span itemprop="name">お問い合わせ</span>
                     </span>
                     <meta itemprop="position" content="2" />
                 </li>
-
-                <!-- <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="breadcrumb__item">
-                    <span itemprop="item" href="contact.html" class="breadcrumb__link">
-                        <span itemprop="name">お問い合わせエラー</span>
-                    </span>
-                    <meta itemprop="position" content="3" />
-                </li> -->
             </ol>
         </div>
     </div>
@@ -295,12 +288,14 @@
     <main>
     <section class="top-contact-form contact-form fish-logo">
         <div class="contact-form__inner inner">
-
-            <!-- <div class="contact-form__request">
-                <p>※必須項目が入力されていません。<br class="u-mobile">入力してください。</p>
-            </div> -->
             
-            <ul class="contact-form__items contact-form__items--request">
+            <div class="contact-form__request">
+                <p>
+                    ※必須項目が入力されていません。<br>入力してください。
+                </p>
+            </div>
+
+            <ul class="contact-form__items">
                 <!-- 個人情報 -->
                 <dl class="contact-form__item">
                     <dt>
@@ -309,7 +304,7 @@
                         </h2>
                     </dt>
                     <dd>
-                        <input type="text" class="contact-form__input contact-form__input--request" required placeholder="沖縄　太郎" >
+                        <input type="text" class="contact-form__input" required placeholder="沖縄　太郎">
                     </dd>
                 </dl>
                 <dl class="contact-form__item">

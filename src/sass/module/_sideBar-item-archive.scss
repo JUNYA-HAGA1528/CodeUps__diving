@@ -1,5 +1,9 @@
 @use "global" as *;
 
+.sideBar-item-archive{
+    cursor: pointer;
+}
+
 .sideBar-item-archive__year{
     position: relative;
     color: $green;

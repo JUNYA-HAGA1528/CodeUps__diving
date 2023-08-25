@@ -234,6 +234,9 @@
                 <source srcset="./assets/images/common/about_fv_pc.jpg" media="(min-width: 768px)">
                 <img src="./assets/images/common/about_fv_sp.jpg" alt="浜辺">
             </picture>
+            <div class="sub-fv__heading">
+                <h1 class="sub-fv__text">About</h1>
+            </div>
         </div>
     </section>
 
@@ -264,65 +267,91 @@
     
     
     
+
+
+
+
+
+
     <main>
-    <section class="layout-about page-about fish-logo">
+    <section class="top-page-about page-about fish-logo">
         <div class="page-about__inner inner">
-            <div class="page-about__img">
-                <div class="page-about__img-left u-desktop">
-                    <img src="./assets/images/common/about1.jpg" alt="シーサーが屋根の上にいる">
+
+            <div class="page-about__img-block">
+                <div class="page-about__right-img">
+                    <img src="./assets/images/common/about2.jpg" alt="" />
                 </div>
-                <div class="page-about__img-right">
-                    <img src="./assets/images/common/about2.jpg" alt="黄色い魚が泳ぐ">
+                <div class="page-about__left-block">
+                    <div class="page-about__left-img">
+                        <img src="./assets/images/common/about1.jpg" alt="" />
+                    </div>
                 </div>
+
+            <div class="page-about__text-block">
+            <h3 class="page-about__title">
+                Dive into<br />the Ocean
+            </h3>
+            <div class="page-about__text-wrap">
+                <p class="page-about__pc-text">
+                    ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
+                    ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+                </p>
             </div>
-            <div class="page-about__content">
-                <div class="page-about__heading">
-                    <h3 class="page-about__heading-title">Dive&nbsp;into<br>the&nbsp;Ocean</h3>
-                </div>
-                <div class="page-about__sentence ">
-                    <p class="page-about__text">
-                        ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
-                    </p>
-                </div>
+            </div>
+                <p class="page-about__sp-text">
+                    ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
+                    ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+                </p>
             </div>
         </div>
     </section>
 
-
-    <section class="layout-about-gallery page-gallery">
+    <section class="top-gallery gallery">
         <div class="gallery__inner inner">
 
-            <div class="page-gallery__title section-title">
-                <p class="section-title__en">gallery</p>
+            <div class="gallery__title section-title">
+                <p class="section-title__en">Gallery</p>
                 <h2 class="section-title__jp">フォト</h2>
             </div>
 
-            <div class="page-gallery__wrapper">
-                
-                <div class="page-gallery__items">
-                    <div class="page-gallery__item js-gallery-photo">
-                        <img src="./assets/images/common/about_gallery1.jpg" alt="赤い魚の大群"/>
-                    </div>
-                    <div class="page-gallery__item js-gallery-photo">
-                        <img src="./assets/images/common/about_gallery2.jpg" alt="遠浅の海辺" />
-                    </div>
-                    <div class="page-gallery__item js-gallery-photo">
-                        <img src="./assets/images/common/about_gallery3.jpg" alt="２匹の魚" />
-                    </div>
-                    <div class="page-gallery__item js-gallery-photo">
-                        <img src="./assets/images/common/about_gallery4.jpg" alt="黄色の魚" />
-                    </div>
-                    <div class="page-gallery__item js-gallery-photo">
-                        <img src="./assets/images/common/about_gallery5.jpg" alt="ピンクの魚" />
-                    </div>
-                    <div class="page-gallery__item js-gallery-photo">
-                        <img src="./assets/images/common/about_gallery6.jpg" alt="２匹のオレンジ色の魚" />
-                    </div>
-                    <div class="page-gallery__modal js-gallery-overlay"></div>
-                </div>
+            <div class="gallery__box">
+                <ul class="gallery__items">
+                    <li class="gallery__item js-modal">
+                        <img src="./assets/images/common/about_gallery1.jpg" alt="赤い小魚の大群" />
+                    </li>
+                    <li class="gallery__item js-modal">
+                        <img src="./assets/images/common/about_gallery2.jpg" alt="海と船" />
+                    </li>
+                    <li class="gallery__item js-modal">
+                        <img src="./assets/images/common/about_gallery3.jpg" alt="シマシマ模様の熱帯魚が二匹" />
+                    </li>
+                    <li class="gallery__item js-modal">
+                        <img src="./assets/images/common/about_gallery4.jpg" alt="一匹の熱帯魚" />
+                    </li>
+                    <li class="gallery__item js-modal">
+                        <img src="./assets/images/common/about_gallery5.jpg" alt="ピンクの小魚の大群" />
+                    </li>
+                    <li class="gallery__item js-modal">
+                        <img src="./assets/images/common/about_gallery6.jpg" alt="二匹の黄色い熱帯魚と珊瑚礁" />
+                    </li>
+                </ul>
             </div>
         </div>
+        <!-- モーダル時のグレー背景 -->
+        <div class="gallery__modal-background js-background"></div>
     </section>
+
+
+
+
+
+
+
+
+
+
+
+
 
     <!-- contact -->
     <section class="contact contact--about">
@@ -353,7 +382,7 @@
                         <p class="contact__inquiry-title__guide">ご予約・お問い合わせはコチラ</p>
                     </div>
                     <div class="contact__button">
-                        <a href="contact.html" class="button"><span>Contact&nbsp;as</span></a>
+                        <a href="contact.html" class="button"><span>Contact&nbsp;us</span></a>
                     </div>
                 </div>
             </div>

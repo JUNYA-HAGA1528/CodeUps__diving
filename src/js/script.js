@@ -128,22 +128,26 @@ jQuery(function ($) {
 
 
 
-    //about モーダル   
-    let scrollPos;
-    $(".js-gallery-photo").click(function () {
-        scrollPos = $(window).scrollTop();
-        $(".js-gallery-overlay").html($(this).prop("outerHTML"));
-        $(".js-gallery-overlay").fadeIn(200);
-        $(".js-header, .js-page-top").hide();
-        $('html').addClass('is-fixed');
-        return false,
-        $(".js-gallery-overlay").click(function () {
-            $(".js-gallery-overlay").fadeOut(200, function () {
-                $(".js-header, .js-page-top").fadeIn();
-                $('html').removeClass('is-fixed');
-            });
-            return false;
-        });
+       ////////////
+    // about　モーダル
+    ////////////
+    // コース画像モーダル表示イベント
+    $(".js-modal").click(function () {
+        // まず、クリックした画像の HTML(<img>タグ全体)を#frayDisplay内にコピー
+        $(".js-background").html($(this).prop("outerHTML"));
+        //そして、fadeInで表示する。
+        $(".js-background").fadeIn(200);
+        $("body").addClass("loading__no-scroll");
+        return false;
+    });
+
+    // コース画像モーダル非表示イベント
+    // モーダル画像背景 または 拡大画像そのものをクリックで発火
+    $(".js-background").click(function () {
+        // 非表示にする
+        $(".js-background").fadeOut(200);
+        $("body").removeClass("loading__no-scroll");
+        return false;
     });
 
 

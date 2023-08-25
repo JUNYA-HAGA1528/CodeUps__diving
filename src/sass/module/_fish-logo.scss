@@ -16,7 +16,7 @@
     width: rem(122);
     /* height指定しないと表示されないので、ここは指定する */
     height: rem(55);
-    z-index: -100;
+    z-index: -1000;
     @include mq(md){
         background-image: url(../images/common/share_fish.png);
         background-position: center;
@@ -29,7 +29,7 @@
         width: rem(301);
         /* height指定しないと表示されないので、ここは指定する */
         height: rem(138);
-        z-index: -100;
+        z-index: -1000;
     }
 }
 

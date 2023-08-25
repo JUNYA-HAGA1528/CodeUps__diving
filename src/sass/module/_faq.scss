@@ -1,13 +1,12 @@
 @use "global" as *;
 
-.faq__inner{
+.faq__inner.inner{
     max-width: $max-width;
-}
-
-.faq__items{
-    max-width: rem(700);
-    width: 100%;
-    margin: auto;
+    @include mq(md){
+        max-width: rem(750);
+        width: 100%;
+        margin: auto;
+    }
 }
 
 .faq__item + .faq__item{

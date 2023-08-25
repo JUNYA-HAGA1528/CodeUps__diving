@@ -1,0 +1,29 @@
+@use "global" as *;
+
+.tab-parts__flex{
+    display: flex;
+    flex-wrap: wrap;
+    gap: rem(16.5) rem(21);
+    @include mq("md") {
+        gap: rem(0) rem(32);
+    }
+}
+
+.tab-parts__tab {
+    width: rem(162);
+    padding: rem(5.2) 0;
+    text-align: center;
+    background-color: $white;
+    color: $green;
+    border: rem(1) solid $green;
+    font-size: rem(14);
+    font-weight: $regular;
+    line-height: calc(22/14);
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.tab-parts__tab.current {
+    background-color: $green;
+    color: $white;
+}

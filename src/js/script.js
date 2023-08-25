@@ -113,17 +113,6 @@ jQuery(function ($) {
     $(function () {
         // 最初のコンテンツは表示
         $(".js-campaign-wrapper:first-of-type").css("display", "block");
-        // タブをクリックすると
-        $(".js-campaign-tab").on("click", function () {
-            // 現在選択されているタブからcurrentを外す
-            $(".current").removeClass("current");
-            // クリックされたタブにcurrentクラスを付与
-            $(this).addClass("current");
-            // クリックされた要素が何番目か取得（クリックしたタブのインデックス番号を取得）
-            const index = $(this).index();
-            // クリックしたタブのインデックス番号と同じコンテンツを表示
-            $(".js-campaign-wrapper").hide().eq(index).fadeIn(300);
-        });
     });
 
 
@@ -153,8 +142,8 @@ jQuery(function ($) {
 
     //accordion
     $(function () {
-        $(".accordion:first-of-type .accordion__content").css("display", "block");
-        $(".accordion:first-of-type .accordion__title").addClass("show");
+        $(".accordion__content").css("display", "block");
+        $(".accordion__title").addClass("show");
         $(".accordion__title").on("click", function () {
             $(this).next().slideToggle();
             $(this).toggleClass("show");
@@ -184,16 +173,41 @@ jQuery(function ($) {
     $(function () {
         // 最初のコンテンツは表示
         $(".js-voice-wrapper:first-of-type").css("display", "block");
-        // タブをクリックすると
-        $(".js-voice-tab").on("click", function () {
-            // 現在選択されているタブからcurrentを外す
-            $(".current").removeClass("current");
-            // クリックされたタブにcurrentクラスを付与
-            $(this).addClass("current");
-            // クリックされた要素が何番目か取得（クリックしたタブのインデックス番号を取得）
-            const index = $(this).index();
-            // クリックしたタブのインデックス番号と同じコンテンツを表示
-            $(".js-voice-wrapper").hide().eq(index).fadeIn(300);
-        });
     });
+
+     ///////////
+  // サイドバー アコーディオン
+  ///////////
+//   function toggleAccordion(accordionElement) {
+//     var findElm = accordionElement
+//       .closest(".aside-archive__items")
+//       .find(".aside-archive__item");
+//     $(findElm).slideToggle();
+
+//     if (accordionElement.hasClass("close")) {
+//       accordionElement.removeClass("close");
+//     } else {
+//       accordionElement.addClass("close");
+//     }
+//   }
+
+//   $(document).ready(function () {
+//     $(".js-archive-accordion.open").each(function () {
+//       toggleAccordion($(this));
+//     });
+
+//     $(".js-archive-accordion").on("click", function () {
+//       toggleAccordion($(this));
+//     });
+//   });
+
+
+
+
+
+
+
+
+
+
 });  

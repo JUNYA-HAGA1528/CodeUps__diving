@@ -31,11 +31,10 @@
 }
 
 .sub-fv img{
-    aspect-ratio: 375 / 460;
-    width: 100%;
-    height: 100%;
+    height: rem(460);
     object-fit: cover;
-    @include mq("md") {
-        aspect-ratio: 1440 / 548;
+    @include mq(md){
+        height: rem(548);
+        
     }
 }

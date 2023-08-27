@@ -188,7 +188,6 @@ jQuery(function ($) {
         accordionElement.addClass("close");
         }
     }
-
     $(document).ready(function () {
         $(".js-archive-accordion.open").each(function () {
         toggleAccordion($(this));
@@ -199,5 +198,14 @@ jQuery(function ($) {
         });
     });
 
+
+
+
+
+
+
+
+    
+   
 
 });  

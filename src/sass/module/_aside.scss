@@ -1,5 +1,18 @@
 @use "global" as *;
 
+
+.aside__inner{
+    width: 100%;
+    padding: 0 rem(25.6);
+    @include mq(md){
+        padding: 0;
+    }
+}
+
+.aside__content + .aside__content{
+    margin-top: rem(80);
+}
+
 .aside__heading{
     display: flex;
     align-items: center;

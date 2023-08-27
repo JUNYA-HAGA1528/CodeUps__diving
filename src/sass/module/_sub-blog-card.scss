@@ -21,7 +21,7 @@
 }
 
 
-.sub-blog-card__text{
+.sub-blog-card p{
     margin-top: rem(24);
     font-size: rem(16);
     font-weight: $regular;
@@ -46,11 +46,11 @@
     margin-top: rem(4.8);
 }
 
-.sub-blog-cards__flex-img img{
+.sub-blog-cards__flex img{
     width: rem(20);
     height: rem(20);
 }
 
-.sub-blog-cards__flex-text{
+.sub-blog-cards__flex p{
     margin-left: rem(6.4);
 }

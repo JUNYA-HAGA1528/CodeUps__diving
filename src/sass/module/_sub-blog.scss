@@ -1,30 +1,14 @@
 @use "global" as *;
 
-.sub-blog__inner{
-    position: relative;
-    max-width: $max-width;
-}
 
-.sub-blog__wrapper{
-    @include mq(md){
-        display: flex;
-    }
-}
-
-.sub-blog__main{
-    @include mq(md){
-        width: 72%;
-    }
-}
-
-.sub-blog-card__data{
+.sub-blog__data{
     font-family:$font-gotu ;
     font-size: rem(14);
     font-weight: $normal;
     line-height: calc(18/14);
 }
 
-.sub-blog-card__title{
+.sub-blog__title{
     margin-top: rem(8);
     font-size: rem(24);
     font-weight: $medium;
@@ -47,22 +31,10 @@
     margin-left: rem(80);
 }
 
-.sub-blog__side{
+.sub-blog__aside{
     margin-top: rem(80);
     @include mq(md){
         width: 27%;
         margin-top: 0;
-        margin-left: rem(80);
     }
-}
-
-.sub-blog__side-inner{
-    padding: 0 rem(25.6);
-    @include mq(md){
-        padding: 0;
-    }
-}
-
-.sub-blog__side-content + .sub-blog__side-content{
-    margin-top: rem(80);
 }

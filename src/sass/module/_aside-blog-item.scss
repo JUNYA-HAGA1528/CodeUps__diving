@@ -1,47 +1,47 @@
 @use "global" as *;
 
-.aside-item-blog{
+.aside-blog-item{
     display: grid;
     grid-gap: rem(24);
     gap: rem(24);
 }
 
-.aside-item-blog__link{
+.aside-blog-item__link{
     background-color: $white;
     box-shadow: rem(2) rem(2) rem(10) rgba(0, 0, 0, 0.25);
     padding: rem(16) rem(16) rem(16) rem(16);
 }
 
-.aside-item-blog__flex{
+.aside-blog-item__flex{
     display: flex;
     align-items: flex-start;
 }
 
-.aside-item-blog__img{
+.aside-blog-item__img{
     width: 49.3%;
 }
 
-.aside-item-blog__img img{
+.aside-blog-item__img img{
     aspect-ratio: 121/90;
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.aside-item-blog__content{
+.aside-blog-item__content{
     margin-top: rem(-6.4);
     margin-left: rem(16);
     width: 50.7%;
 }
 
-.aside-item-blog__data{
+.aside-blog-item__data{
     font-family:$font-gotu ;
     font-size: rem(12);
     font-weight: $normal;
     line-height: 1;
 }
 
-.aside-item-blog__title{
+.aside-blog-item__title{
     margin-top: rem(4);
     font-size: rem(16);
     font-weight: $medium;

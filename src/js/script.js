@@ -175,39 +175,29 @@ jQuery(function ($) {
         $(".js-voice-wrapper:first-of-type").css("display", "block");
     });
 
-     ///////////
-  // サイドバー アコーディオン
-  ///////////
-//   function toggleAccordion(accordionElement) {
-//     var findElm = accordionElement
-//       .closest(".aside-archive__items")
-//       .find(".aside-archive__item");
-//     $(findElm).slideToggle();
+     //aside archiveタブ
+    function toggleAccordion(accordionElement) {
+        var findElm = accordionElement
+        .closest(".aside-archive__items")
+        .find(".aside-archive__item");
+        $(findElm).slideToggle();
 
-//     if (accordionElement.hasClass("close")) {
-//       accordionElement.removeClass("close");
-//     } else {
-//       accordionElement.addClass("close");
-//     }
-//   }
+        if (accordionElement.hasClass("close")) {
+        accordionElement.removeClass("close");
+        } else {
+        accordionElement.addClass("close");
+        }
+    }
 
-//   $(document).ready(function () {
-//     $(".js-archive-accordion.open").each(function () {
-//       toggleAccordion($(this));
-//     });
+    $(document).ready(function () {
+        $(".js-archive-accordion.open").each(function () {
+        toggleAccordion($(this));
+        });
 
-//     $(".js-archive-accordion").on("click", function () {
-//       toggleAccordion($(this));
-//     });
-//   });
-
-
-
-
-
-
-
-
+        $(".js-archive-accordion").on("click", function () {
+        toggleAccordion($(this));
+        });
+    });
 
 
 });  

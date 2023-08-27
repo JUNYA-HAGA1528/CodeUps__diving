@@ -1,16 +1,16 @@
 @use "global" as *;
 
-.sideBar__heading{
+.aside__heading{
     display: flex;
     align-items: center;
     position: relative;
 }
 
-.sideBar__heading-img{
+.aside__heading-img{
     margin-left: rem(24);
 }
 
-.sideBar__heading::before{
+.aside__heading::before{
     position: absolute;
     content: "";
     display: block;
@@ -21,27 +21,27 @@
     background-color: $green;
 }
 
-.sideBar__heading-img img{
+.aside__heading-img img{
     width: rem(50);
     height: rem(50);
 }
 
-.sideBar__heading-title{
+.aside__heading-title{
     margin-left: rem(8);
     font-size: rem(24);
     font-weight: $regular;
     line-height: 1;
 }
 
-.sideBar__items{
+.aside__items{
     margin-top: rem(24);
 }
 
-.sideBar__button{
-    text-align: center;
-    margin-top: rem(40);
+.aside__item + .aside__item{
+   margin-top: rem(40);
 }
 
-.sideBar__item + .sideBar__item {
+.aside__button{
+    text-align: center;
     margin-top: rem(40);
 }

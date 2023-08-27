@@ -1,29 +1,29 @@
 @use "global" as *;
 
-.sideBar-item-voice__head-left{
+.aside-item-voice__head-left{
     @include mq(md){
         padding-top: rem(35);
     }
 }
 
-.sideBar-item-voice__img img{
+.aside-item-voice__img img{
     aspect-ratio: 294/218;
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.sideBar-item-voice__text{
+.aside-item-voice__text{
     margin-top: rem(16);
 }
 
-.sideBar-item-voice__gender{
+.aside-item-voice__gender{
     font-size: rem(12);
     font-weight: $regular;
     line-height: calc(18/12);
 }
 
-.sideBar-item-voice__title{
+.aside-item-voice__title{
     margin-top: rem(8);
     font-size: rem(24);
     font-weight: $medium;

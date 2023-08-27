@@ -112,3 +112,49 @@
 }
 
 
+
+
+
+/*下層ページ*/
+.aside__item--calc{
+	width: 100%;
+}
+
+.campaign-card__img--calc{
+	aspect-ratio: 280/188;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	@include mq(md){
+		aspect-ratio: 294/188;	
+	}
+}
+
+.campaign-card__body--calc{
+	padding:rem(16) rem(16) rem(24) rem(16);
+	@include mq(md){
+		padding: rem(11.5) rem(16) rem(24);
+	}
+}
+
+.campaign-card__title--calc{
+	text-align: center;
+}
+
+.campaign-card__wrapper--calc{
+	margin-top: rem(8);
+	@include mq(md){
+		margin-top: rem(8);
+	}
+}
+
+.campaign-card__subtitle--calc{
+	font-weight: $regular;
+	font-size: rem(14);
+	line-height: calc(24/14);
+	text-align: center;
+	@include mq(md){
+		font-size: rem(14);
+		line-height: calc(24/16);
+	}
+}

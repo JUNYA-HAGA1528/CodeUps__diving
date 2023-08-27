@@ -3,26 +3,20 @@
 .page-blog__inner{
     position: relative;
     max-width: $max-width;
+    width: 100%;
+    margin: auto;
 }
 
 .page-blog__wrapper{
     @include mq(md){
         display: flex;
+        gap: 7.41%;
     }
 }
 
 .page-blog__main{
     @include mq(md){
         width: 72%;
-    }
-}
-
-.page-blog__items{
-    margin-top: rem(24);
-    padding: 0 rem(6);
-    @include mq(md){
-        margin-top: 0;
-        padding: 0;
     }
 }
 
@@ -33,22 +27,22 @@
     }
 }
 
-.page-blog__side{
+.page-blog__aside{
     margin-top: rem(80);
     @include mq(md){
         width: 27%;
         margin-top: 0;
-        margin-left: rem(80);
     }
 }
 
-.page-blog__side-inner{
+.page-blog__aside-inner{
+    width: 100%;
     padding: 0 rem(25.6);
     @include mq(md){
         padding: 0;
     }
 }
 
-.page-blog__side-content + .page-blog__side-content{
+.page-blog__aside-content + .page-blog__aside-content{
     margin-top: rem(80);
 }

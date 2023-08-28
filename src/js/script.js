@@ -151,7 +151,7 @@ jQuery(function ($) {
     });
 
 
-    //information タブ
+    // information タブ
     $(function () {
         // 最初のコンテンツは表示
         $(".js-information-wrapper:first-of-type").css("display", "block");
@@ -198,14 +198,5 @@ jQuery(function ($) {
         });
     });
 
-
-
-
-
-
-
-
-    
-   
 
 });  

@@ -57,3 +57,8 @@ $green:#408F95;
 
 
 
+
+:root {
+	--header: 10rem;
+	scroll-padding: calc(var(--header) + 1.25rem);
+  }

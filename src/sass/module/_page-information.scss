@@ -1,18 +1,172 @@
 @use "global" as *;
 
-.page-information__inner{
+.sub-information__inner{
     max-width: $max-width;
 }
 
-.page-information__container{
-    margin-top: rem(16);
 
+.sub-information__tab {
+    display: grid;
+    gap: 5.66%;
+    grid-template-columns: repeat(3, 1fr);
+    flex-wrap: wrap;
     @include mq("md") {
-        margin-top: rem(24);
+      gap: 8.3%;
     }
-}
-
-.page-information__items{
-    display: none;
+  }
+  
+  .sub-information__tab-cards {
+    margin-top: rem(16);
+    @include mq("md") {
+      margin-top: rem(20);
+    }
+  }
+  
+  .sub-information__tab-label a {
+    display: inline-block;
+    color: $green;
+    background: #ddf0f1;
+    padding: rem(10) 0;
+    text-align: center;
+    font-size: 0;
+    font-weight: $regular;
+    box-shadow: rem(2) rem(2) rem(4) 0 rgba(0, 0, 0, 0.25);
+    position: relative;
+    z-index: 1;
     width: 100%;
-}
+    @include mq("md") {
+      padding: rem(13) 0 rem(13) 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  
+  .sub-information__tab-label span {
+    font-size: rem(14);
+    @include mq("md") {
+      font-size: rem(24);
+      white-space: nowrap;
+    }
+  }
+  
+  .sub-information__tab-label span:first-child {
+    position: relative;
+    height: rem(64);
+    width: rem(64);
+    margin-right: rem(8);
+  }
+  
+  .sub-information__tab-label span:first-child::before {
+    @include mq("md") {
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background-image: url(../images/common/information_logo.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      top: 0;
+      left: 0;
+      right: 0;
+    }
+  }
+  
+  .sub-information__tab-label--2 span:first-child::before {
+    @include mq("md") {
+      background-image: url(../images/common/information_logo.png);
+    }
+  }
+  
+  .sub-information__tab-label--3 span:first-child::before {
+    @include mq("md") {
+      background-image: url(../images/common/information_logo.png);
+    }
+  }
+  
+  // 内容
+  .sub-information__tab-cards a {
+    width: 100%;
+    margin-top: rem(15);
+    @include mq("md") {
+      margin-top: rem(23);
+    }
+  }
+  
+  /* アクティブなタブ */
+  .sub-information__tab-label.active a {
+    background: $green;
+    color: $white;
+  }
+  
+  .sub-information__tab-label.active a span::before {
+    filter: brightness(1000%);
+  }
+  
+  .sub-information__inner {
+    max-width: rem(600);
+  }
+  
+  .sub-information__card {
+    border: 1px solid $green;
+    padding: rem(16) rem(24) rem(20);
+    @include mq("md") {
+      border: 2px solid $green;
+      padding: rem(22);
+      display: flex;
+      gap: 4.66%;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  
+  .sub-information__body {
+    @include mq("md") {
+      width: 47.67%;
+    }
+  }
+  
+  .sub-information__title {
+    font-size: rem(24);
+    font-weight: $bold;
+    line-height: 1.6;
+    border-bottom: 1px solid $green;
+    @include mq("md") {
+      line-height: 1;
+      padding-bottom: rem(8);
+      font-size: rem(24);
+    }
+  }
+  
+  .sub-information__text {
+    margin-top: rem(8);
+    @include mq("md") {
+      line-height: 1.5;
+    }
+  }
+  
+  .sub-information__img {
+    position: relative;
+    margin-top: rem(8);
+    @include mq("md") {
+      margin-top: 0;
+      width: 47.67%;
+    }
+  }
+  
+  .sub-information__img::before {
+    content: "";
+    display: block;
+    padding-top: 63.61%;
+  }
+  
+  .sub-information__img img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }

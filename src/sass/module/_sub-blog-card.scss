@@ -38,19 +38,32 @@
     }
 }
 
-.sub-blog-cards__flex{
-    display: flex;
+.sub-blog__content li {
+    margin-top: rem(40);
 }
 
-.sub-blog-cards__flex + .sub-blog-cards__flex{
+.sub-blog__sentence ul{
+    margin-top: rem(40);
+}
+
+.sub-blog__sentence li{
+    display: flex;
+    margin-top: rem(10);
+}
+
+.sub-blog__sentence + .sub-blog__sentence{
     margin-top: rem(4.8);
 }
 
-.sub-blog-cards__flex img{
+.sub-blog__sentence img{
     width: rem(20);
     height: rem(20);
 }
 
-.sub-blog-cards__flex p{
+.sub-blog__sentence p{
     margin-left: rem(6.4);
+}
+
+.sub-blog__text p{
+    margin-top: rem(40);
 }

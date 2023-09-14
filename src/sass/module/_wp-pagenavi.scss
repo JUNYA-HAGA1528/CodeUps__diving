@@ -1,0 +1,106 @@
+@use "global" as *;
+
+.wp-pagenavi {
+    clear: both;
+    text-align: center;
+  }
+  .wp-pagenavi a,
+  .wp-pagenavi span {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: rem(38);
+    height: rem(38);
+    background-color: $white;
+    color: $green;
+    font-weight: $bold;
+    font-size: rem(16);
+    border: rem(1) solid $green;
+    transition: 0.3s ease;
+    margin: 0 rem(2);
+    padding: rem(6) rem(12);
+    @include mq("md") {
+      margin: 0 rem(4);
+    }
+  }
+  
+  .wp-pagenavi a:hover {
+    color: $white;
+    background-color: $green;
+    opacity: 1;
+  }
+  
+  .wp-pagenavi span.is-active {
+    color: $white;
+    background-color: $green;
+  }
+  
+  .wp-pagenavi .previouspostslink:hover::after {
+    border-top: rem(1) solid $white;
+    border-left: rem(1) solid $white;
+    background-color: $green;
+    transition: 0.3s ease;
+    opacity: 1;
+  }
+  
+  .wp-pagenavi .nextpostslink:hover::after {
+    border-bottom: rem(1) solid $white;
+    border-right: rem(1) solid $white;
+    background-color: $green;
+    transition: 0.3s ease;
+    opacity: 1;
+  }
+  
+  .wp-pagenavi a:hover,
+  .wp-pagenavi span:hover {
+    color: $white;
+    background-color: $green;
+    transition: 0.3s ease;
+    opacity: 1;
+  }
+  
+  .wp-pagenavi .previouspostslink {
+    // margin-right: rem(30);
+    margin-left: 0;
+    position: relative;
+    margin-right: clamp(rem(30), 2.291vw, rem(40));
+  }
+  
+  .wp-pagenavi .previouspostslink::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: rem(10);
+    width: rem(10);
+    height: rem(10);
+    border-top: rem(1) solid $green;
+    border-left: rem(1) solid $green;
+    transform: translateY(-50%) rotate(-45deg);
+  }
+  
+  .wp-pagenavi .nextpostslink {
+    // margin-left: rem(30);
+    margin-right: 0;
+    position: relative;
+    margin-left: clamp(rem(30), 2.291vw, rem(40));
+  }
+  
+  .wp-pagenavi .nextpostslink::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 32%;
+    right: rem(10);
+    width: rem(10);
+    height: rem(10);
+    border-bottom: rem(1) solid $green;
+    border-right: rem(1) solid $green;
+    transform: translateY(-50%) rotate(-45deg);
+  }
+  
+  .wp-pagenavi .u-desktop {
+    display: none;
+    @include mq("md") {
+      display: inline-block;
+    }
+  }

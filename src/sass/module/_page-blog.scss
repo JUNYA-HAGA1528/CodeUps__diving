@@ -18,13 +18,6 @@
     }
 }
 
-.page-blog__pagination{
-    margin-top: rem(89.6);
-    @include mq(md){
-        margin-top: rem(75.2);
-    }
-}
-
 .page-blog__aside{
     margin-top: rem(80);
     @include mq(md){

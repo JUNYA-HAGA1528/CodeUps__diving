@@ -5,6 +5,13 @@
     color: $white;
 }
 
+.footer--padding{
+    padding:rem(48) 0 rem(70) ;
+    @include mq(md){
+        padding:rem(82) 0 rem(70) ;
+    }
+}
+
 .footer__inner{
     max-width: $max-width;
     margin: 0 auto;

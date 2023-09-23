@@ -257,14 +257,11 @@ jQuery(function ($) {
   
   
   //accordion
-  $(function () {
-      $(".accordion__content").css("display", "block");
-      $(".accordion__title").addClass("show");
-      $(".accordion__title").on("click", function () {
-          $(this).next().slideToggle();
-          $(this).toggleClass("show");
-      });
-  });
+    document.querySelectorAll(".js-accordion").forEach(function (elem) {
+        elem.addEventListener("click", function () {
+        elem.classList.toggle("open");
+        });
+    });
   
   
   // information タブ

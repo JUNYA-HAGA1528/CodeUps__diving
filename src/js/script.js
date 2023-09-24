@@ -233,29 +233,38 @@ jQuery(function ($) {
   
   
   
-     ////////////
-  // about　モーダル
-  ////////////
-  // コース画像モーダル表示イベント
-  $(".js-modal").click(function () {
-      // まず、クリックした画像の HTML(<img>タグ全体)を#frayDisplay内にコピー
-      $(".js-background").html($(this).prop("outerHTML"));
-      //そして、fadeInで表示する。
-      $(".js-background").fadeIn(200);
-      $("body").addClass("loading__no-scroll");
-      return false;
-  });
-  
-  // コース画像モーダル非表示イベント
-  // モーダル画像背景 または 拡大画像そのものをクリックで発火
-  $(".js-background").click(function () {
-      // 非表示にする
-      $(".js-background").fadeOut(200);
-      $("body").removeClass("loading__no-scroll");
-      return false;
-  });
-  
-  
+   
+
+//about モーダル表示;
+let scrollPosition;
+$(".js-modal").click(function () {
+    scrollPosition = $(window).scrollTop();
+    $(".js-modal-window").html($(this).prop("outerHTML"));
+    $(".js-modal-window").fadeIn(300);
+    $(".js-header, .js-page-top").hide();
+    $("html").addClass("is-fixed");
+    var index = $(this).index();
+        $('html, body').css('overflow', 'hidden');
+        // 背景を固定してスクロールさせない
+    return false;
+});
+
+
+//about モーダル非表示
+$(".js-modal-window").click(function () {
+    $(".js-modal-window").fadeOut(300, function () {
+        $(".js-header, .js-page-top").fadeIn();
+        $("html").removeClass("is-fixed");
+        $(window).scrollTop(scrollPosition);
+        
+        $('html, body').removeAttr('style');
+        // 背景の固定を解除する
+    });
+    return false;
+});
+
+
+
   //accordion
     document.querySelectorAll(".js-accordion").forEach(function (elem) {
         elem.addEventListener("click", function () {

@@ -1,6 +1,10 @@
 @use "global" as *;
 
-.terms__inner{
+.terms-of-service {
+    line-height: 2;
+  }
+
+.terms-of-service__inner{
     max-width: $max-width;
     width: 100%;
     margin: auto;
@@ -9,36 +13,39 @@
     }
 }
 
-.terms__heading{
-    padding-top: rem(4);
-    @include mq(md){
-        padding-top: rem(10);
+.terms-of-service__inner {
+    @include mq("md") {
+        max-width: rem(850);
     }
 }
-
-.terms__title{
-    font-size: rem(24);
+  
+.terms-of-service__title {
     font-weight: $medium;
-    line-height: 1;
-    @include mq(md){
+    @include mq("md") {
         font-size: rem(32);
     }
 }
 
-.terms__subtitle{
-    margin-top: rem(46);
-    font-size: rem(16);
-    font-weight: $regular;
-    line-height: calc(32/16);
-}
-
-.terms_content{
+.terms-of-service__content{
     margin-top: rem(32);
-    font-size: rem(16);
-    font-weight: $regular;
-    line-height: calc(32/16);
+    @include mq("md") {
+        margin-top: rem(30);
+    }
 }
-
-.terms__item + .terms__item{
-    margin-top: rem(32);
+  
+.terms-of-service__top-text {
+    margin-bottom: rem(30);
+    @include mq("md") {
+        margin-bottom: rem(32);
+    }
+}
+  
+.terms-of-service__list-items {
+    padding-left: rem(24);
+    list-style-type: decimal;
+    margin-top: rem(33);
+}
+  
+.terms-of-service__bottom-text {
+    margin-top: rem(30);
 }

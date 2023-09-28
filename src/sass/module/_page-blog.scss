@@ -17,11 +17,3 @@
         width: 72%;
     }
 }
-
-.page-blog__aside{
-    margin-top: rem(80);
-    @include mq(md){
-        width: 27%;
-        margin-top: 0;
-    }
-}

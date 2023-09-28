@@ -1,11 +1,11 @@
 @use "global" as *;
 
-.sub-information__inner{
+.page-imformation__inner{
     max-width: $max-width;
 }
 
 
-.sub-information__tab {
+.page-imformation__tab {
     display: grid;
     gap: 5.66%;
     grid-template-columns: repeat(3, 1fr);
@@ -15,14 +15,14 @@
     }
   }
   
-  .sub-information__tab-cards {
+  .page-imformation__tab-cards {
     margin-top: rem(16);
     @include mq("md") {
       margin-top: rem(20);
     }
   }
   
-  .sub-information__tab-label a {
+  .page-imformation__tab-label a {
     display: inline-block;
     color: $green;
     background: #ddf0f1;
@@ -42,7 +42,7 @@
     }
   }
   
-  .sub-information__tab-label span {
+  .page-imformation__tab-label span {
     font-size: rem(14);
     @include mq("md") {
       font-size: rem(24);
@@ -50,14 +50,14 @@
     }
   }
   
-  .sub-information__tab-label span:first-child {
+  .page-imformation__tab-label span:first-child {
     position: relative;
     height: rem(64);
     width: rem(64);
     margin-right: rem(8);
   }
   
-  .sub-information__tab-label span:first-child::before {
+  .page-imformation__tab-label span:first-child::before {
     @include mq("md") {
       content: "";
       width: 100%;
@@ -73,20 +73,20 @@
     }
   }
   
-  .sub-information__tab-label--2 span:first-child::before {
+  .page-imformation__tab-label--2 span:first-child::before {
     @include mq("md") {
       background-image: url(../images/common/information_logo.png);
     }
   }
   
-  .sub-information__tab-label--3 span:first-child::before {
+  .page-imformation__tab-label--3 span:first-child::before {
     @include mq("md") {
       background-image: url(../images/common/information_logo.png);
     }
   }
   
   // 内容
-  .sub-information__tab-cards a {
+  .page-imformation__tab-cards a {
     width: 100%;
     margin-top: rem(15);
     @include mq("md") {
@@ -95,20 +95,20 @@
   }
   
   /* アクティブなタブ */
-  .sub-information__tab-label.active a {
+  .page-imformation__tab-label.active a {
     background: $green;
     color: $white;
   }
   
-  .sub-information__tab-label.active a span::before {
+  .page-imformation__tab-label.active a span::before {
     filter: brightness(1000%);
   }
   
-  .sub-information__inner {
+  .page-imformation__inner {
     max-width: rem(600);
   }
   
-  .sub-information__card {
+  .page-imformation__card {
     border: 1px solid $green;
     padding: rem(16) rem(24) rem(20);
     @include mq("md") {
@@ -121,13 +121,13 @@
     }
   }
   
-  .sub-information__body {
+  .page-imformation__body {
     @include mq("md") {
       width: 47.67%;
     }
   }
   
-  .sub-information__title {
+  .page-imformation__title {
     font-size: rem(24);
     font-weight: $bold;
     line-height: 1.6;
@@ -139,14 +139,14 @@
     }
   }
   
-  .sub-information__text {
+  .page-imformation__text {
     margin-top: rem(8);
     @include mq("md") {
       line-height: 1.5;
     }
   }
   
-  .sub-information__img {
+  .page-imformation__img {
     position: relative;
     margin-top: rem(8);
     @include mq("md") {
@@ -155,13 +155,13 @@
     }
   }
   
-  .sub-information__img::before {
+  .page-imformation__img::before {
     content: "";
     display: block;
     padding-top: 63.61%;
   }
   
-  .sub-information__img img {
+  .page-imformation__img img {
     position: absolute;
     top: 50%;
     left: 50%;

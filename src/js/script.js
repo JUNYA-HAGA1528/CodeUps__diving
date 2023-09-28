@@ -14,9 +14,9 @@ jQuery(function ($) {
       //押されたのが.リストの何番目か調べる
       var number = $('.js-tab-link a').index(this);
       //表示領域を全部非表示にする
-      $('.sub-information__tab-cards li').hide();
+      $('.page-imformation__tab-cards li').hide();
       //押されたのと同じ番目のを表示する
-      $('.sub-information__tab-cards li').eq(number).fadeIn();
+      $('.page-imformation__tab-cards li').eq(number).fadeIn();
       //.activeがついてるのを外す
       $('.js-tab-link a').removeClass('active');
       $('.js-tab-info li').removeClass('active');
@@ -31,9 +31,9 @@ jQuery(function ($) {
       //押されたのが.リストの何番目か調べる
       var number = $('.js-tab-link-footer a').index(this);
       //表示領域を全部非表示にする
-      $('.sub-information__tab-cards li').hide();
+      $('.page-imformation__tab-cards li').hide();
       //押されたのと同じ番目のを表示する
-      $('.sub-information__tab-cards li').eq(number).fadeIn();
+      $('.page-imformation__tab-cards li').eq(number).fadeIn();
       //.activeがついてるのを外す
       $('.js-tab-link-footer a').removeClass('active');
       $('.js-tab-info li').removeClass('active');
@@ -48,9 +48,9 @@ jQuery(function ($) {
       //押されたのがリストの何番目か調べる
       var index = $('.js-tab-info li').index(this);
       //表示領域を全部非表示にする
-      $('.sub-information__tab-cards li').hide();
+      $('.page-imformation__tab-cards li').hide();
       //押されたのと同じ番目のを表示する
-      $('.sub-information__tab-cards li').eq(index).fadeIn();
+      $('.page-imformation__tab-cards li').eq(index).fadeIn();
       //.activeがついてるのを外す
       $('.js-tab-info li').removeClass('active');
       //押したやつにactiveを付与してる
@@ -67,7 +67,7 @@ jQuery(function ($) {
       if(hash.match(/#info/)){
       //ハッシュタグが「#tab◯」ってなってたら
       //表示領域を全部非表示にする
-      $('.sub-information__tab-cards li').hide();
+      $('.page-imformation__tab-cards li').hide();
       //メニューに付いてる「class="active"」を削除
       $('.js-tab-info li').removeClass('active');
       //「#tab◯」を「◯」だけにする
@@ -75,7 +75,7 @@ jQuery(function ($) {
      
       tabname = tabname - 1;
       //n番目の内容を表示する
-      $('.sub-information__tab-cards li').eq(tabname).fadeIn();
+      $('.page-imformation__tab-cards li').eq(tabname).fadeIn();
       //n番目のメニューに「class="active"」を付与する
       $('.js-tab-info li').eq(tabname).addClass('active');
       }else{
@@ -83,18 +83,18 @@ jQuery(function ($) {
       //1番目のメニューに「class="active"」を付与する
       $('.js-tab-info li').eq(0).addClass('active');
       //内容部分を全部非表示にする
-      $('.sub-information__tab-cards li').hide();
+      $('.page-imformation__tab-cards li').hide();
       //1番目の内容を表示する
-      $('.sub-information__tab-cards li').eq(0).fadeIn();
+      $('.page-imformation__tab-cards li').eq(0).fadeIn();
       }
       }else{
       //ハッシュがなかったら（普通にページ開いたときとか）
       //1番目のメニューに「class="active"」を付与する
       $('.js-tab-info li').eq(0).addClass('active');
       //内容部分を全部非表示にする
-      $('.sub-information__tab-cards li').hide();
+      $('.page-imformation__tab-cards li').hide();
       //1番目の表示内容を表示する
-      $('.sub-information__tab-cards li').eq(0).fadeIn();
+      $('.page-imformation__tab-cards li').eq(0).fadeIn();
       }
     });
     

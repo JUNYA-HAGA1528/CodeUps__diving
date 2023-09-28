@@ -1,5 +1,12 @@
 @use "global" as *;
 
+.aside{
+    margin-top: rem(80);
+    @include mq(md){
+        width: 27%;
+        margin-top: 0;
+    }
+}
 
 .aside__inner{
     width: 100%;

@@ -281,107 +281,90 @@
     <section class="top-contact-form contact-form fish-logo">
         <div class="contact-form__inner inner">
 
-            <!-- <div class="contact-form__request">
-                <p>※必須項目が入力されていません。<br class="u-mobile">入力してください。</p>
-            </div> -->
-            
-            <ul class="contact-form__items contact-form__items--request">
-                <!-- 個人情報 -->
-                <dl class="contact-form__item">
+            <div class="sub-contact__error">
+                <p>※必須項目が入力されていません。<br class="u-mobile">
+                  入力してください。</p>
+            </div>
+    
+            <form id="form" action="process_form.php" method="post" class="sub-contact__form form">
+                <dl>
                     <dt>
-                        <h2 class="contact-form__label">
-                            お名前<span class="contact-form__label-lequired">必須</span>
-                        </h2>
+                        お名前<span class="form__label">必須</span>
                     </dt>
                     <dd>
-                        <input type="text" class="contact-form__input contact-form__input--request" required placeholder="沖縄　太郎" >
+                        <input type="text" name="company" value="" placeholder="沖縄&nbsp;&nbsp;太郎" required/>
                     </dd>
                 </dl>
-                <dl class="contact-form__item">
+                <dl>
                     <dt>
-                        <h2 class="contact-form__label">メールアドレス
-                            <span class="contact-form__label-lequired">必須</span>
-                        </h2>
+                        メールアドレス<span class="form__label">必須</span>
                     </dt>
                     <dd>
-                        <input type="email" class="contact-form__input" required placeholder="aaa000@ggmail.com">
+                        <input type="email" name="mail_address" value="" class="validate[]" placeholder="aaa000@ggmail.com" required/>
                     </dd>
                 </dl>
-                <dl class="contact-form__item">
+                <dl>
                     <dt>
-                        <h2 class="contact-form__label">
-                            電話番号<span class="contact-form__label-lequired">必須</span>
-                        </h2>
+                      電話番号<span class="form__label">必須</span>
                     </dt>
                     <dd>
-                        <input type="text" class="contact-form__input" required placeholder="000-0000-0000">
+                        <input type="text" name="tel" value="" placeholder="000-0000-0000"required/>
                     </dd>
                 </dl>
-
-                <!-- チェックボックス -->
-                <dl class="contact-form__item contact-form__item--block">
+                <dl class="form__checkbox">
                     <dt>
-                        <h2 class="contact-form__label contact-form__content--checkbox">
-                            お問合せ項目<span class="contact-form__label-lequired">必須</span>
-                        </h2>
+                        お問合せ項目<span class="form__label">必須</span>
                     </dt>
-                    <dd class="contact-form__content">
-                        <label class="contact-form__checkbox" required>
-                            <input name="checkbox" class="contact-form__checkbox-input" type="checkbox">
-                            <span class="contact-form__checkbox-text">ダイビング講習について</span>
+                    <dd>
+                        <label>
+                            <input required type="checkbox" name="お問合せ項目" value="ダイビング講習について" checked/>
+                            <span>ダイビング講習について</span>
                         </label>
-                        <label class="contact-form__checkbox" required>
-                            <input name="checkbox" class="contact-form__checkbox-input" type="checkbox">
-                            <span class="contact-form__checkbox-text">ファンデイビングについて</span>
+                        <label>
+                            <input required type="checkbox" name="お問合せ項目" value="ファンデイビングについて"/>
+                            <span>ファンデイビングについて</span>
                         </label>
-                        <label class="contact-form__checkbox" required>
-                            <input name="checkbox" class="contact-form__checkbox-input" type="checkbox">
-                            <span class="contact-form__checkbox-text">体験ダイビングについて</span>
+                        <label>
+                            <input required type="checkbox" name="お問合せ項目" value="体験ダイビングについて"/>
+                            <span>体験ダイビングについて</span>
                         </label>
                     </dd>
                 </dl>
-
-                <!-- プルダウン -->
-                <dl class="contact-form__item">
-                    <dt>
-                        <h2 class="contact-form__label">キャンペーン</h2>
-                    </dt>
+                <dl class="form__select">
+                    <dt>キャンペーン</dt>
                     <dd>
-                        <select id="job" name="job" class="contact-form__select">
+                        <select name="キャンペーン">
                             <option value="">キャンペーン内容を選択</option>
-                            <option value="Google/Yahoo検索">ライセンス取得</option>
-                            <option value="SNS">体験ダイビング</option>
-                            <option value="ブログ">ブログ</option>
-                            <option value="友人や知人">ナイトダイビング</option>
-                            <option value="その他">貸切ファンダイビング</option>
+                            <option value="ライセンス取得">ライセンス取得</option>
+                            <option value="貸切体験ダイビング">貸切体験ダイビング</option>
+                            <option value="ナイトダイビング">ナイトダイビング</option>
+                            <option value="貸切ファンダイビング">貸切ファンダイビング</option>
                         </select>
                     </dd>
                 </dl>
-
-                <!-- お問い合わせ -->
-                <dl class="contact-form__item">
+                <dl class="form__textarea">
                     <dt>
-                        <h2 class="contact-form__label contact-form__content--faq">
-                            お問合せ内容<span class="contact-form__label-lequired">必須</span>
-                        </h2>
+                        お問合せ内容<span class="form__label">必須</span>
                     </dt>
                     <dd>
-                        <textarea class="contact-form__textarea"></textarea>
+                        <textarea name="contents" class="textarea" required></textarea>
                     </dd>
                 </dl>
-                
-                <!-- チェックボックス -->
-                <label class="contact-form__agreement">
-                    <input name="checkbox" class="contact-form__agreement-input" type="checkbox">
-                    <span class="contact-form__agreement-text">個人情報の取り扱いについて同意のうえ
-                        送信します。</span>
-                </label>
-            </ul>
-
-            <!-- 送信ボタン --> 
-            <div class="contact-form__button">
-                <a href="#" class="button"><span>send</span></a>
-            </div>
+                <div class="form__personal-info">
+                    <div class="form__personal-info-inner">
+                        <label>
+                            <input required type="checkbox"  name="個人情報について" value="同意"/>
+                            <span>個人情報の取り扱いについて同意のうえ<br class="u-mobile" />送信します。</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="form__btn">
+                    <div class="btn-submit">
+                        <input type="submit" class="btn-submit__body js-submit" value="" />
+                        <a href="" class="button"><span>Send</span></a>
+                    </div>
+                </div>
+            </form> 
         </div>
     </section>
 </main>

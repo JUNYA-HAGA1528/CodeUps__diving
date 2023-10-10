@@ -15,6 +15,7 @@
   margin-top: rem(16);
   padding-bottom: rem(10);
   border-bottom: 1px solid $green;
+  font-weight: 400;
   @include mq("md") {
     font-size: rem(32);
     margin-top: rem(19);

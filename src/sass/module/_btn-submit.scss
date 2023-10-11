@@ -1,0 +1,117 @@
+@use "global" as *;
+
+.btn-submit {
+  position: relative;
+  width: 100%;
+  max-width: rem(202);
+  display: inline-flex;
+  border: 1px solid $green;
+}
+
+.btn-submit::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border: 1px solid $green;
+  transform: translate(rem(5), rem(5));
+  z-index: -1;
+  pointer-events: none;
+}
+
+.btn-submit__body[type="submit"] {
+  border: 1px solid $green;
+  background-color: $green;
+  color: $white;
+  width: 100%;
+  max-width: rem(202);
+  padding: rem(16) 0;
+  font-size: rem(14);
+  justify-content: center;
+  transition: opacity 0.4s;
+  z-index: 0;
+  cursor: pointer;
+  @include mq("md") {
+    transition: color 0.2s;
+    opacity: 1;
+  }
+}
+
+.btn-submit__body[type="submit"]:hover {
+  opacity: 0.8;
+  @include mq("md") {
+    opacity: 1;
+  }
+}
+
+.btn-submit::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: $white;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: all 0.5s cubic-bezier(0.45, 0, 0.55, 1);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.btn-submit:hover::after {
+  @include mq("md") {
+    transform: scale(1, 1);
+    pointer-events: none;
+  }
+}
+
+.btn-submit__text {
+  position: absolute;
+  display: inline-block;
+  top: 28%;
+  left: 28%;
+  color: $white;
+  z-index: 2;
+}
+
+.btn-submit:hover .btn-submit__text {
+  pointer-events: none;
+  @include mq("md") {
+    color: $green;
+  }
+}
+
+.btn-submit__text::after {
+  content: "";
+  position: absolute;
+  max-width: rem(40);
+  width: 120%;
+  height: 100%;
+  left: rem(50);
+  top: rem(-1);
+  background-image: url(../images/common/button_arrow_white.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  pointer-events: none;
+}
+
+.btn-submit:hover .btn-submit__text::after {
+  @include mq("md") {
+    background-image: url(../images/common/button_arrow_green.png);
+    pointer-events: none;
+  }
+}
+
+.btn-submit:hover .btn-submit__arrow::before,
+.btn-submit:hover .btn-submit__arrow::after {
+  background-color: transparent;
+  pointer-events: none;
+}
+
+.btn-submit__body[disabled] {
+  cursor: not-allowed;
+}
